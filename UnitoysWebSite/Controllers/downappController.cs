@@ -6,7 +6,7 @@ using System.Web.Mvc;
 
 namespace UnitoysWebSite.Controllers
 {
-    public class DownController : Controller
+    public class downappController : Controller
     {
         //
         // GET: /Down/

@@ -123,7 +123,7 @@
     <Compile Include="Areas\cn\Controllers\HomeController.cs" />
     <Compile Include="Areas\en\Controllers\HomeController.cs" />
     <Compile Include="Areas\en\enAreaRegistration.cs" />
-    <Compile Include="Controllers\DownController.cs" />
+    <Compile Include="Controllers\downappController.cs" />
     <Compile Include="Controllers\IndexController.cs" />
     <Compile Include="Controllers\WxController.cs" />
     <Compile Include="Controllers\zhongchouController.cs" />
