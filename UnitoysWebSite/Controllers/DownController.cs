@@ -12,7 +12,7 @@ namespace UnitoysWebSite.Controllers
         // GET: /Down/
         public ActionResult Index()
         {
-            return Redirect("http://a.app.qq.com/o/simple.jsp?pkgname=cn.com.aixiaoqi");
+            return Redirect("http://a.app.qq.com/o/simple.jsp?pkgname=cn.com.aixiaoqi");//1
         }
 	}
 }
