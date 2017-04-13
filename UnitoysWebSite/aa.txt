@@ -1,0 +1,587 @@
+[Oct  3 19:55:21] DEBUG[1314]: chan_sip.c:23123 rc4SockRead: ----->rc4key 51dyt51dyt req data REGISTER sip:121.42.190.150:65061 SIP/2.0
+Via: SIP/2.0/UDP 192.168.1.105:6139;branch=z9hG4bK145195842
+From: <sip:18850161016@121.42.190.150:65061>;tag=288861961
+To: <sip:18850161016@121.42.190.150:65061>
+Call-ID: 1190986830
+CSeq: 1 REGISTER
+Contact: <sip:18850161016@192.168.1.105:6139>
+Max-Forwards: 70
+User-Agent: Android/v4
+Expires: 1800
+Content-Length: 0
+
+
+[Oct  3 19:55:21] DEBUG[1314]: chan_sip.c:23157 handle_request_do: ----->Received REGISTER (2) 
+[Oct  3 19:55:21] DEBUG[1314]: acl.c:507 ast_ouraddrfor: Found IP address for this socket
+[Oct  3 19:55:21] DEBUG[1314]: chan_sip.c:3916 ast_sip_ouraddrfor: -----> set to rc4Addr 0.0.0.0 port 65061 ,us= 0.0.0.0
+[Oct  3 19:55:21] DEBUG[1314]: chan_sip.c:3929 ast_sip_ouraddrfor: Setting SIP_TRANSPORT_UDP with address 121.42.190.150:65061
+[Oct  3 19:55:21] DEBUG[1314]: chan_sip.c:7750 sip_alloc: ----->client ip 163.125.241.241 port 64897 our ip 163.125.241.241 port 65061, transport 8 
+[Oct  3 19:55:21] DEBUG[1314]: chan_sip.c:3839 build_via: =======================>build_via SIP/2.0/UDP 121.42.190.150:65061;branch=z9hG4bK0683740a;rport
+[Oct  3 19:55:21] DEBUG[1314]: chan_sip.c:7881 sip_alloc: Allocating new SIP dialog for 1190986830 - REGISTER (No RTP)
+[Oct  3 19:55:21] DEBUG[1314]: chan_sip.c:22607 handle_incoming: ___________________________________________________begin
+[Oct  3 19:55:21] DEBUG[1314]: chan_sip.c:22654 handle_incoming: ----->Received REGISTER (2) - Command in SIP REGISTER
+[Oct  3 19:55:21] DEBUG[1314]: chan_sip.c:22693 handle_incoming: **** Received REGISTER (2) - Command in SIP REGISTER
+[Oct  3 19:55:21] DEBUG[1314]: chan_sip.c:13589 register_verify: ___________________________________________________begin
+[Oct  3 19:55:21] DEBUG[1314]: chan_sip.c:27822 checkUserPolicy: ------------------->add name 18850161016 variable
+[Oct  3 19:55:21] DEBUG[1314]: chan_sip.c:27841 checkUserPolicy: ------------------->add money  100 variable
+[Oct  3 19:55:21] DEBUG[1314]: chan_sip.c:27860 checkUserPolicy: ------------------->add numberVerify  Y variable
+[Oct  3 19:55:21] DEBUG[1314]: chan_sip.c:27891 checkUserPolicy: ------------------->add call-limit 100 variable
+[Oct  3 19:55:21] DEBUG[1314]: chan_sip.c:27899 checkUserPolicy: ------------------->strbufft =  sjxjwgw201518850161016 
+[Oct  3 19:55:21] DEBUG[1314]: chan_sip.c:27901 checkUserPolicy: ------------------->md5(strbufft) =  504229fcf92563a3775770377ca97270 
+[Oct  3 19:55:21] DEBUG[1314]: chan_sip.c:27904 checkUserPolicy: ------------------->md5(strbufft) =  ab08e5c36265fb3ada178fb488622269 
+[Oct  3 19:55:21] DEBUG[1314]: chan_sip.c:27910 checkUserPolicy: ------------------->add secret 21e6e60fb6f6d850c3edeb02948f3a66 variable
+[Oct  3 19:55:21] DEBUG[1314]: chan_sip.c:29028 checkSvssAccount: ---------->user have build  user var->name name
+[Oct  3 19:55:21] DEBUG[1314]: chan_sip.c:3648 sip_real_dst: Trying to putrecv destined for 163.125.241.241:64897sa destined for 163.125.241.241:6139ourip destined for 163.125.241.241:65061
+[Oct  3 19:55:21] DEBUG[1314]: chan_sip.c:3772 __sip_xmit: Trying to put 'SIP/2.0 401' onto UDP socket destined for 163.125.241.241:64897
+[Oct  3 19:55:21] DEBUG[1314]: chan_sip.c:3783 __sip_xmit: ---------->Trying to len(484) onto UDP socket destined for 163.125.241.241:64897
+[Oct  3 19:55:21] DEBUG[1314]: chan_sip.c:13879 register_verify: ___________________________________________________end
+[Oct  3 19:55:21] DEBUG[1314]: chan_sip.c:22932 handle_incoming: ___________________________________________________end
+[Oct  3 19:55:21] DEBUG[1314]: chan_sip.c:23123 rc4SockRead: ----->rc4key 51dyt51dyt req data REGISTER sip:121.42.190.150:65061 SIP/2.0
+Via: SIP/2.0/UDP 192.168.1.105:6139;branch=z9hG4bK974129725
+From: <sip:18850161016@121.42.190.150:65061>;tag=288861961
+To: <sip:18850161016@121.42.190.150:65061>
+Call-ID: 1190986830
+CSeq: 2 REGISTER
+Contact: <sip:18850161016@192.168.1.105:6139>
+Authorization: Digest username="18850161016", realm="51dyt", nonce="3c5e4bf7", uri="sip:121.42.190.150:65061", response="e6c4ddad4121f5422ea32ae7ba0cc47f", algorithm=MD5
+Max-Forwards: 70
+User-Agent: Android/v4
+Expires: 1800
+Content-Length: 0
+
+
+[Oct  3 19:55:21] DEBUG[1314]: chan_sip.c:23157 handle_request_do: ----->Received REGISTER (2) 
+[Oct  3 19:55:21] DEBUG[1314]: chan_sip.c:22607 handle_incoming: ___________________________________________________begin
+[Oct  3 19:55:21] DEBUG[1314]: chan_sip.c:22654 handle_incoming: ----->Received REGISTER (2) - Command in SIP REGISTER
+[Oct  3 19:55:21] DEBUG[1314]: chan_sip.c:22693 handle_incoming: **** Received REGISTER (2) - Command in SIP REGISTER
+[Oct  3 19:55:21] DEBUG[1314]: chan_sip.c:13589 register_verify: ___________________________________________________begin
+[Oct  3 19:55:21] DEBUG[1314]: chan_sip.c:27822 checkUserPolicy: ------------------->add name 18850161016 variable
+[Oct  3 19:55:21] DEBUG[1314]: chan_sip.c:27841 checkUserPolicy: ------------------->add money  100 variable
+[Oct  3 19:55:21] DEBUG[1314]: chan_sip.c:27860 checkUserPolicy: ------------------->add numberVerify  Y variable
+[Oct  3 19:55:21] DEBUG[1314]: chan_sip.c:27891 checkUserPolicy: ------------------->add call-limit 100 variable
+[Oct  3 19:55:21] DEBUG[1314]: chan_sip.c:27899 checkUserPolicy: ------------------->strbufft =  sjxjwgw201518850161016 
+[Oct  3 19:55:21] DEBUG[1314]: chan_sip.c:27901 checkUserPolicy: ------------------->md5(strbufft) =  504229fcf92563a3775770377ca97270 
+[Oct  3 19:55:21] DEBUG[1314]: chan_sip.c:27904 checkUserPolicy: ------------------->md5(strbufft) =  ab08e5c36265fb3ada178fb488622269 
+[Oct  3 19:55:21] DEBUG[1314]: chan_sip.c:27910 checkUserPolicy: ------------------->add secret 21e6e60fb6f6d850c3edeb02948f3a66 variable
+[Oct  3 19:55:21] DEBUG[1314]: chan_sip.c:29028 checkSvssAccount: ---------->user have build  user var->name name
+[Oct  3 19:55:21] DEBUG[1314]: chan_sip.c:12992 parse_register_contact: Store REGISTER's src-IP:port for call routing.
+[Oct  3 19:55:21] DEBUG[1314]: chan_sip.c:3648 sip_real_dst: Trying to putrecv destined for 163.125.241.241:64897sa destined for 163.125.241.241:6139ourip destined for 163.125.241.241:65061
+[Oct  3 19:55:21] DEBUG[1314]: chan_sip.c:3772 __sip_xmit: Trying to put 'SIP/2.0 200' onto UDP socket destined for 163.125.241.241:64897
+[Oct  3 19:55:21] DEBUG[1314]: chan_sip.c:3783 __sip_xmit: ---------->Trying to len(513) onto UDP socket destined for 163.125.241.241:64897
+[Oct  3 19:55:21] DEBUG[1314]: chan_sip.c:13879 register_verify: ___________________________________________________end
+[Oct  3 19:55:21] DEBUG[1314]: chan_sip.c:22932 handle_incoming: ___________________________________________________end
+[Oct  3 19:55:21] DEBUG[1299]: devicestate.c:344 _ast_device_state: No provider found, checking channel drivers for SIP - 18850161016
+[Oct  3 19:55:21] DEBUG[1299]: chan_sip.c:24255 sip_devicestate: Checking device state for peer 18850161016
+[Oct  3 19:55:21] DEBUG[1299]: devicestate.c:462 do_state_change: Changing state for SIP/18850161016 - state 1 (Not in use)
+[Oct  3 19:55:21] DEBUG[1299]: devicestate.c:442 devstate_event: device 'SIP/18850161016' state '1'
+[Oct  3 19:55:21] DEBUG[1317]: app_queue.c:1092 handle_statechange: Device 'SIP/18850161016' changed to state '1' (Not in use) but we don't care because they're not a member of any queue.
+[Oct  3 19:55:22] DEBUG[1314]: chan_sip.c:23123 rc4SockRead: ----->rc4key 51dyt51dyt req data INVITE sip:98118850161016%23203256@121.42.190.150:65061 SIP/2.0
+Via: SIP/2.0/UDP 192.168.1.105:6139;branch=z9hG4bK376363252
+From: <sip:18850161016@121.42.190.150:65061>;tag=1775132302
+To: <sip:98118850161016%23203256@121.42.190.150:65061>
+Call-ID: 803239365
+CSeq: 20 INVITE
+Contact: <sip:18850161016@192.168.1.105:6139>
+Content-Type: application/sdp
+Allow: INVITE, ACK, CANCEL, OPTIONS, BYE, REFER, NOTIFY, MESSAGE, SUBSCRIBE, INFO
+Max-Forwards: 70
+User-Agent: Android/v4
+Subject: call
+Content-Length:   243
+
+v=0
+o=18850161016 829 928 IN IP4 192.168.1.105
+s=call
+c=IN IP4 192.168.1.105
+t=0 0
+m=audio 3083 RTP/AVP 18 0 8 106
+a=rtpmap:18 G729/8000/1
+a=rtpmap:0 PCMU/8000/1
+a=rtpmap:8 PCMA/8000/1
+a=rtpmap:106 telephone-event/8000/1
+a=sendrecv
+
+[Oct  3 19:55:22] DEBUG[1314]: chan_sip.c:23157 handle_request_do: ----->Received INVITE (5) 
+[Oct  3 19:55:22] DEBUG[1314]: acl.c:507 ast_ouraddrfor: Found IP address for this socket
+[Oct  3 19:55:22] DEBUG[1314]: chan_sip.c:3916 ast_sip_ouraddrfor: -----> set to rc4Addr 0.0.0.0 port 65061 ,us= 0.0.0.0
+[Oct  3 19:55:22] DEBUG[1314]: chan_sip.c:3929 ast_sip_ouraddrfor: Setting SIP_TRANSPORT_UDP with address 121.42.190.150:65061
+[Oct  3 19:55:22] DEBUG[1314]: chan_sip.c:7750 sip_alloc: ----->client ip 163.125.241.241 port 64897 our ip 163.125.241.241 port 65061, transport 8 
+  == Using SIP RTP CoS mark 5
+[Oct  3 19:55:22] DEBUG[1314]: chan_sip.c:5305 do_setnat: Setting NAT on RTP to On
+[Oct  3 19:55:22] DEBUG[1314]: chan_sip.c:3839 build_via: =======================>build_via SIP/2.0/UDP 121.42.190.150:65061;branch=z9hG4bK1758f725;rport
+[Oct  3 19:55:22] DEBUG[1314]: chan_sip.c:7881 sip_alloc: Allocating new SIP dialog for 803239365 - INVITE (With RTP)
+[Oct  3 19:55:22] DEBUG[1314]: chan_sip.c:22607 handle_incoming: ___________________________________________________begin
+[Oct  3 19:55:22] DEBUG[1314]: chan_sip.c:22654 handle_incoming: ----->Received INVITE (5) - Command in SIP INVITE
+[Oct  3 19:55:22] DEBUG[1314]: chan_sip.c:22693 handle_incoming: **** Received INVITE (5) - Command in SIP INVITE
+[Oct  3 19:55:22] DEBUG[1314]: chan_sip.c:20521 handle_request_invite: ___________________________________________________begin
+[Oct  3 19:55:22] DEBUG[1314]: chan_sip.c:14815 check_user_full: ___________________________________________________begin
+[Oct  3 19:55:22] DEBUG[1314]: chan_sip.c:5305 do_setnat: Setting NAT on RTP to On
+[Oct  3 19:55:22] DEBUG[1314]: chan_sip.c:3648 sip_real_dst: Trying to putrecv destined for 163.125.241.241:64897sa destined for 163.125.241.241:6139ourip destined for 163.125.241.241:65061
+[Oct  3 19:55:22] DEBUG[1314]: chan_sip.c:3772 __sip_xmit: Trying to put 'SIP/2.0 401' onto UDP socket destined for 163.125.241.241:64897
+[Oct  3 19:55:22] DEBUG[1314]: chan_sip.c:3783 __sip_xmit: ---------->Trying to len(495) onto UDP socket destined for 163.125.241.241:64897
+[Oct  3 19:55:22] DEBUG[1314]: chan_sip.c:20863 handle_request_invite: ----->check_user res 1 sip pvt timelimit 0
+[Oct  3 19:55:22] DEBUG[1314]: chan_sip.c:21426 handle_request_invite: ___________________________________________________begin
+[Oct  3 19:55:22] DEBUG[1314]: chan_sip.c:22932 handle_incoming: ___________________________________________________end
+[Oct  3 19:55:22] DEBUG[1314]: chan_sip.c:23123 rc4SockRead: ----->rc4key 51dyt51dyt req data ACK sip:98118850161016%23203256@121.42.190.150:65061 SIP/2.0
+Via: SIP/2.0/UDP 192.168.1.105:6139;branch=z9hG4bK376363252
+From: <sip:18850161016@121.42.190.150:65061>;tag=1775132302
+To: <sip:98118850161016%23203256@121.42.190.150:65061>;tag=as60932fce
+Call-ID: 803239365
+CSeq: 20 ACK
+Content-Length: 0
+
+
+[Oct  3 19:55:22] DEBUG[1314]: chan_sip.c:23157 handle_request_do: ----->Received ACK (6) 
+[Oct  3 19:55:22] DEBUG[1314]: chan_sip.c:22607 handle_incoming: ___________________________________________________begin
+[Oct  3 19:55:22] DEBUG[1314]: chan_sip.c:22654 handle_incoming: ----->Received ACK (6) - Command in SIP ACK
+[Oct  3 19:55:22] DEBUG[1314]: chan_sip.c:22693 handle_incoming: **** Received ACK (6) - Command in SIP ACK
+[Oct  3 19:55:22] DEBUG[1314]: chan_sip.c:4341 __sip_ack: =============================Acked pending invite 0, old seqno 20, seqno 20 old resp 1, resp 1
+[Oct  3 19:55:22] DEBUG[1314]: chan_sip.c:4385 __sip_ack: Stopping retransmission on '803239365' of Response 20: Match Found
+[Oct  3 19:55:22] DEBUG[1314]: chan_sip.c:22932 handle_incoming: ___________________________________________________end
+[Oct  3 19:55:22] DEBUG[1314]: chan_sip.c:23123 rc4SockRead: ----->rc4key 51dyt51dyt req data INVITE sip:98118850161016%23203256@121.42.190.150:65061 SIP/2.0
+Via: SIP/2.0/UDP 192.168.1.105:6139;branch=z9hG4bK533298385
+From: <sip:18850161016@121.42.190.150:65061>;tag=1775132302
+To: <sip:98118850161016%23203256@121.42.190.150:65061>
+Call-ID: 803239365
+CSeq: 21 INVITE
+Contact: <sip:18850161016@192.168.1.105:6139>
+Authorization: Digest username="18850161016", realm="51dyt", nonce="7ed15f30", uri="sip:98118850161016%23203256@121.42.190.150:65061", response="d1458fa277b78cae5311234ae3ee6a9e", algorithm=MD5
+Content-Type: application/sdp
+Allow: INVITE, ACK, CANCEL, OPTIONS, BYE, REFER, NOTIFY, MESSAGE, SUBSCRIBE, INFO
+Max-Forwards: 70
+User-Agent: Android/v4
+Subject: call
+Content-Length:   243
+
+v=0
+o=18850161016 829 928 IN IP4 192.168.1.105
+s=call
+c=IN IP4 192.168.1.105
+t=0 0
+m=audio 3083 RTP/AVP 18 0 8 106
+a=rtpmap:18 G729/8000/1
+a=rtpmap:0 PCMU/8000/1
+a=rtpmap:8 PCMA/8000/1
+a=rtpmap:106 telephone-event/8000/1
+a=sendrecv
+
+[Oct  3 19:55:22] DEBUG[1314]: chan_sip.c:23157 handle_request_do: ----->Received INVITE (5) 
+[Oct  3 19:55:22] DEBUG[1314]: chan_sip.c:22607 handle_incoming: ___________________________________________________begin
+[Oct  3 19:55:22] DEBUG[1314]: chan_sip.c:22654 handle_incoming: ----->Received INVITE (5) - Command in SIP INVITE
+[Oct  3 19:55:22] DEBUG[1314]: chan_sip.c:22693 handle_incoming: **** Received INVITE (5) - Command in SIP INVITE
+[Oct  3 19:55:22] DEBUG[1314]: chan_sip.c:20521 handle_request_invite: ___________________________________________________begin
+[Oct  3 19:55:22] DEBUG[1314]: chan_sip.c:14815 check_user_full: ___________________________________________________begin
+[Oct  3 19:55:22] DEBUG[1314]: chan_sip.c:5305 do_setnat: Setting NAT on RTP to On
+[Oct  3 19:55:22] DEBUG[1314]: chan_sip.c:27822 checkUserPolicy: ------------------->add name 18850161016 variable
+[Oct  3 19:55:22] DEBUG[1314]: chan_sip.c:27841 checkUserPolicy: ------------------->add money  100 variable
+[Oct  3 19:55:22] DEBUG[1314]: chan_sip.c:27860 checkUserPolicy: ------------------->add numberVerify  Y variable
+[Oct  3 19:55:22] DEBUG[1314]: chan_sip.c:27891 checkUserPolicy: ------------------->add call-limit 100 variable
+[Oct  3 19:55:22] DEBUG[1314]: chan_sip.c:27899 checkUserPolicy: ------------------->strbufft =  sjxjwgw201518850161016 
+[Oct  3 19:55:22] DEBUG[1314]: chan_sip.c:27901 checkUserPolicy: ------------------->md5(strbufft) =  504229fcf92563a3775770377ca97270 
+[Oct  3 19:55:22] DEBUG[1314]: chan_sip.c:27904 checkUserPolicy: ------------------->md5(strbufft) =  ab08e5c36265fb3ada178fb488622269 
+[Oct  3 19:55:22] DEBUG[1314]: chan_sip.c:27910 checkUserPolicy: ------------------->add secret 21e6e60fb6f6d850c3edeb02948f3a66 variable
+[Oct  3 19:55:22] DEBUG[1314]: chan_sip.c:29028 checkSvssAccount: ---------->user have build  user var->name name
+[Oct  3 19:55:22] DEBUG[1314]: chan_sip.c:28861 getCalleeNumber: ---------->Looking for 98118850161016%23203256(98118850161016%23203256) in default (domain )
+[Oct  3 19:55:22] DEBUG[1314]: chan_sip.c:20863 handle_request_invite: ----->check_user res 0 sip pvt timelimit 10000
+[Oct  3 19:55:22] DEBUG[1314]: chan_sip.c:8786 process_sdp: Processing session-level SDP v=0... UNSUPPORTED.
+[Oct  3 19:55:22] DEBUG[1314]: chan_sip.c:8786 process_sdp: Processing session-level SDP o=18850161016 829 928 IN IP4 192.168.1.105... UNSUPPORTED.
+[Oct  3 19:55:22] DEBUG[1314]: chan_sip.c:8786 process_sdp: Processing session-level SDP s=call... UNSUPPORTED.
+[Oct  3 19:55:22] DEBUG[1314]: chan_sip.c:8786 process_sdp: Processing session-level SDP c=IN IP4 192.168.1.105... OK.
+[Oct  3 19:55:22] DEBUG[1314]: chan_sip.c:8786 process_sdp: Processing session-level SDP t=0 0... UNSUPPORTED.
+[Oct  3 19:55:22] DEBUG[1314]: chan_sip.c:8954 process_sdp: Processing media-level (audio) SDP a=rtpmap:18 G729/8000/1... OK.
+[Oct  3 19:55:22] DEBUG[1314]: chan_sip.c:8954 process_sdp: Processing media-level (audio) SDP a=rtpmap:0 PCMU/8000/1... OK.
+[Oct  3 19:55:22] DEBUG[1314]: chan_sip.c:8954 process_sdp: Processing media-level (audio) SDP a=rtpmap:8 PCMA/8000/1... OK.
+[Oct  3 19:55:22] DEBUG[1314]: chan_sip.c:8954 process_sdp: Processing media-level (audio) SDP a=rtpmap:106 telephone-event/8000/1... OK.
+[Oct  3 19:55:22] DEBUG[1314]: chan_sip.c:8954 process_sdp: Processing media-level (audio) SDP a=sendrecv... OK.
+[Oct  3 19:55:22] DEBUG[1314]: chan_sip.c:3648 sip_real_dst: Trying to putrecv destined for 163.125.241.241:64897sa destined for 163.125.241.241:6139ourip destined for 163.125.241.241:65061
+[Oct  3 19:55:22] DEBUG[1314]: chan_sip.c:9024 process_sdp: ============================================================>call to
+[Oct  3 19:55:22] DEBUG[1314]: rtp.c:2796 ast_rtp_set_peer: ===========>Peer audio RTP is at port 163.125.241.241:3083
+[Oct  3 19:55:22] DEBUG[1314]: chan_sip.c:9173 process_sdp: We're settling with these formats: 0x10c (ulaw|alaw|g729)
+[Oct  3 19:55:22] DEBUG[1314]: chan_sip.c:20941 handle_request_invite: Checking SIP call limits for device 18850161016
+[Oct  3 19:55:22] DEBUG[1314]: chan_sip.c:3648 sip_real_dst: Trying to putrecv destined for 163.125.241.241:64897sa destined for 163.125.241.241:6139ourip destined for 163.125.241.241:65061
+[Oct  3 19:55:22] DEBUG[1314]: chan_sip.c:5993 update_call_counter: ==========>Updating call counter for incoming call  chdestGatewayIp 163.125.241.241, username 18850161016
+[Oct  3 19:55:22] DEBUG[1314]: chan_sip.c:6027 update_call_counter: =====> find peer 18850161016  a local device, in use 0
+[Oct  3 19:55:22] DEBUG[1314]: chan_sip.c:20998 handle_request_invite: ______________First invitation create channel
+[Oct  3 19:55:22] DEBUG[1314]: chan_sip.c:27822 checkUserPolicy: ------------------->add name 18850161016 variable
+[Oct  3 19:55:22] DEBUG[1314]: chan_sip.c:27841 checkUserPolicy: ------------------->add money  100 variable
+[Oct  3 19:55:22] DEBUG[1314]: chan_sip.c:27860 checkUserPolicy: ------------------->add numberVerify  Y variable
+[Oct  3 19:55:22] DEBUG[1314]: chan_sip.c:27891 checkUserPolicy: ------------------->add call-limit 100 variable
+[Oct  3 19:55:22] DEBUG[1314]: chan_sip.c:27899 checkUserPolicy: ------------------->strbufft =  sjxjwgw201518850161016 
+[Oct  3 19:55:22] DEBUG[1314]: chan_sip.c:27901 checkUserPolicy: ------------------->md5(strbufft) =  504229fcf92563a3775770377ca97270 
+[Oct  3 19:55:22] DEBUG[1314]: chan_sip.c:27904 checkUserPolicy: ------------------->md5(strbufft) =  ab08e5c36265fb3ada178fb488622269 
+[Oct  3 19:55:22] DEBUG[1314]: chan_sip.c:27910 checkUserPolicy: ------------------->add secret 21e6e60fb6f6d850c3edeb02948f3a66 variable
+[Oct  3 19:55:22] DEBUG[1314]: chan_sip.c:29028 checkSvssAccount: ---------->user have build  user var->name name
+[Oct  3 19:55:22] DEBUG[1314]: chan_sip.c:28861 getCalleeNumber: ---------->Looking for 98118850161016%23203256(98118850161016%23203256) in default (domain 121.42.190.150)
+[Oct  3 19:55:22] DEBUG[1314]: chan_sip.c:21012 handle_request_invite: =====>Checking SIP call limits for device 18850161016
+[Oct  3 19:55:22] DEBUG[1314]: chan_sip.c:3648 sip_real_dst: Trying to putrecv destined for 163.125.241.241:64897sa destined for 163.125.241.241:6139ourip destined for 163.125.241.241:65061
+[Oct  3 19:55:22] DEBUG[1314]: chan_sip.c:5993 update_call_counter: ==========>Updating call counter for incoming call  chdestGatewayIp 163.125.241.241, username 18850161016
+[Oct  3 19:55:22] DEBUG[1314]: chan_sip.c:6027 update_call_counter: =====> find peer 18850161016  a local device, in use 1
+[Oct  3 19:55:22] DEBUG[1314]: chan_sip.c:7093 sip_new: ___________________________________________________begin
+[Oct  3 19:55:22] DEBUG[1314]: chan_sip.c:3648 sip_real_dst: Trying to putrecv destined for 163.125.241.241:64897sa destined for 163.125.241.241:6139ourip destined for 163.125.241.241:65061
+[Oct  3 19:55:22] DEBUG[1314]: chan_sip.c:7152 sip_new: ----->channel SIP/18850161016-00000246$163.125.241.241 ,domian 121.42.190.150
+[Oct  3 19:55:22] DEBUG[1314]: chan_sip.c:7193 sip_new: *** Our native formats are 0x100 (g729) 
+[Oct  3 19:55:22] DEBUG[1314]: chan_sip.c:7194 sip_new: *** Joint capabilities are 0x10c (ulaw|alaw|g729) 
+[Oct  3 19:55:22] DEBUG[1314]: chan_sip.c:7195 sip_new: *** Our capabilities are 0x50c (ulaw|alaw|g729|ilbc) 
+[Oct  3 19:55:22] DEBUG[1314]: chan_sip.c:7196 sip_new: *** AST_CODEC_CHOOSE formats are 0x100 (g729) 
+[Oct  3 19:55:22] DEBUG[1314]: chan_sip.c:7226 sip_new: This channel will not be able to handle video.
+[Oct  3 19:55:22] DEBUG[1314]: chan_sip.c:7334 sip_new: ___________________________________________________end
+[Oct  3 19:55:22] DEBUG[1314]: chan_sip.c:13161 build_route: build_route: Contact hop: <sip:18850161016@192.168.1.105:6139>
+[Oct  3 19:55:22] NOTICE[1314]: chan_sip.c:21063 handle_request_invite: buf=981 ip=163.125.241.241 device=18850161016  context=default exten=98118850161016#203256 call_maxsessiontime=10000
+[Oct  3 19:55:22] DEBUG[1314]: chan_sip.c:23815 start_session_timer: Session timer started: 5410 - 803239365
+[Oct  3 19:55:22] DEBUG[1314]: chan_sip.c:21310 handle_request_invite: SIP/18850161016-00000246$163.125.241.241: New call is still down.... Trying... 
+[Oct  3 19:55:22] DEBUG[1314]: chan_sip.c:3648 sip_real_dst: Trying to putrecv destined for 163.125.241.241:64897sa destined for 163.125.241.241:6139ourip destined for 163.125.241.241:65061
+[Oct  3 19:55:22] DEBUG[1314]: chan_sip.c:3772 __sip_xmit: Trying to put 'SIP/2.0 100' onto UDP socket destined for 163.125.241.241:64897
+[Oct  3 19:55:22] DEBUG[1314]: chan_sip.c:3783 __sip_xmit: ---------->Trying to len(474) onto UDP socket destined for 163.125.241.241:64897
+[Oct  3 19:55:22] DEBUG[1314]: chan_sip.c:21426 handle_request_invite: ___________________________________________________begin
+[Oct  3 19:55:22] DEBUG[1314]: chan_sip.c:22932 handle_incoming: ___________________________________________________end
+[Oct  3 19:55:22] DEBUG[1299]: devicestate.c:344 _ast_device_state: No provider found, checking channel drivers for SIP - 18850161016
+[Oct  3 19:55:22] DEBUG[1299]: chan_sip.c:24255 sip_devicestate: Checking device state for peer 18850161016
+[Oct  3 19:55:22] DEBUG[1299]: devicestate.c:462 do_state_change: Changing state for SIP/18850161016 - state 2 (In use)
+[Oct  3 19:55:22] DEBUG[1299]: devicestate.c:442 devstate_event: device 'SIP/18850161016' state '2'
+[Oct  3 19:55:22] DEBUG[1299]: devicestate.c:344 _ast_device_state: No provider found, checking channel drivers for SIP - 18850161016
+[Oct  3 19:55:22] DEBUG[1299]: chan_sip.c:24255 sip_devicestate: Checking device state for peer 18850161016
+[Oct  3 19:55:22] DEBUG[1299]: devicestate.c:462 do_state_change: Changing state for SIP/18850161016 - state 2 (In use)
+[Oct  3 19:55:22] DEBUG[1299]: devicestate.c:442 devstate_event: device 'SIP/18850161016' state '2'
+[Oct  3 19:55:22] DEBUG[1299]: devicestate.c:344 _ast_device_state: No provider found, checking channel drivers for SIP - 18850161016
+[Oct  3 19:55:22] DEBUG[1299]: chan_sip.c:24255 sip_devicestate: Checking device state for peer 18850161016
+[Oct  3 19:55:22] DEBUG[1299]: devicestate.c:462 do_state_change: Changing state for SIP/18850161016 - state 2 (In use)
+[Oct  3 19:55:22] DEBUG[1299]: devicestate.c:442 devstate_event: device 'SIP/18850161016' state '2'
+[Oct  3 19:55:22] DEBUG[18305]: pbx.c:3692 pbx_extension_helper: Launching 'Wait'
+    -- Executing [98118850161016#203256@default:1] Wait("SIP/18850161016-00000246$163.125.241.241", "0") in new stack
+[Oct  3 19:55:22] DEBUG[18305]: pbx.c:3520 pbx_substitute_variables_helper_full: Function result is '98118850161016'
+[Oct  3 19:55:22] DEBUG[18305]: pbx.c:3692 pbx_extension_helper: Launching 'Set'
+    -- Executing [98118850161016#203256@default:2] Set("SIP/18850161016-00000246$163.125.241.241", "called=98118850161016") in new stack
+[Oct  3 19:55:22] DEBUG[18305]: pbx.c:3520 pbx_substitute_variables_helper_full: Function result is '203256'
+[Oct  3 19:55:22] DEBUG[18305]: pbx.c:3692 pbx_extension_helper: Launching 'Set'
+    -- Executing [98118850161016#203256@default:3] Set("SIP/18850161016-00000246$163.125.241.241", "sesstiontime=203256000") in new stack
+[Oct  3 19:55:22] DEBUG[18305]: func_strings.c:478 filter: c1=48, c2=57
+[Oct  3 19:55:22] DEBUG[18305]: func_strings.c:492 filter: Allowed: 0123456789
+[Oct  3 19:55:22] DEBUG[18305]: pbx.c:3520 pbx_substitute_variables_helper_full: Function result is '98118850161016'
+[Oct  3 19:55:22] DEBUG[18305]: pbx.c:3692 pbx_extension_helper: Launching 'Set'
+    -- Executing [98118850161016#203256@default:4] Set("SIP/18850161016-00000246$163.125.241.241", "called2=98118850161016") in new stack
+[Oct  3 19:55:22] NOTICE[18305]: ast_expr2.y:760 compose_func_args: argbuf allocated 4 bytes;
+[Oct  3 19:55:22] NOTICE[18305]: ast_expr2.y:779 compose_func_args: argbuf uses 3 bytes;
+[Oct  3 19:55:22] DEBUG[18305]: pbx.c:3588 pbx_substitute_variables_helper_full: Expression result is '0'
+[Oct  3 19:55:22] DEBUG[18305]: pbx.c:3692 pbx_extension_helper: Launching 'GotoIf'
+    -- Executing [98118850161016#203256@default:5] GotoIf("SIP/18850161016-00000246$163.125.241.241", "0?7:6") in new stack
+    -- Goto (default,98118850161016#203256,6)
+[Oct  3 19:55:22] DEBUG[18305]: pbx.c:3692 pbx_extension_helper: Launching 'Dial'
+    -- Executing [98118850161016#203256@default:6] Dial("SIP/18850161016-00000246$163.125.241.241", "SIP/98118850161016@120.76.219.187:5060,203256000,L(203256000:180000:180000)") in new stack
+[Oct  3 19:55:22] DEBUG[1317]: app_queue.c:1092 handle_statechange: Device 'SIP/18850161016' changed to state '2' (In use) but we don't care because they're not a member of any queue.
+[Oct  3 19:55:22] DEBUG[1317]: app_queue.c:1092 handle_statechange: Device 'SIP/18850161016' changed to state '2' (In use) but we don't care because they're not a member of any queue.
+[Oct  3 19:55:22] DEBUG[1317]: app_queue.c:1092 handle_statechange: Device 'SIP/18850161016' changed to state '2' (In use) but we don't care because they're not a member of any queue.
+[Oct  3 19:55:22] DEBUG[18305]: app_dial.c:3143 mysqlReConnect: MySQL Auth: Everything is fine.
+[Oct  3 19:55:22] DEBUG[18305]: app_dial.c:3175 setSvssCallerID: Auth Sql: select displayName,addPrefix from device where certifiedDisplayName='Y' and deviceName='18850161016'
+    -- Limit Data for this call:
+       > timelimit      = 203256000
+       > play_warning   = 180000
+       > play_to_caller = yes
+       > play_to_callee = no
+       > warning_freq   = 180000
+       > start_sound    = 
+       > warning_sound  = timeleft
+       > end_sound      = 
+[Oct  3 19:55:22] DEBUG[18305]: chan_sip.c:24359 sip_request_call: Asked to create a SIP channel with formats: 0x100 (g729)
+[Oct  3 19:55:22] DEBUG[18305]: chan_sip.c:29095 checkSvssDestGateway: ----->checkSvssDestGateway......
+[Oct  3 19:55:22] DEBUG[18305]: chan_sip.c:24489 sip_request_call: ====================>call to 120.76.219.187 transport 1 
+[Oct  3 19:55:22] DEBUG[18305]: chan_sip.c:24508 sip_request_call: ====================>call to 120.76.219.187 transport 1 
+  == Using SIP RTP CoS mark 5
+[Oct  3 19:55:22] DEBUG[18305]: chan_sip.c:3839 build_via: =======================>build_via SIP/2.0/UDP 10.251.54.236:65060;branch=z9hG4bK10e63389;rport
+[Oct  3 19:55:22] DEBUG[18305]: chan_sip.c:7881 sip_alloc: Allocating new SIP dialog for 14a8b941325ea97e4b3e27135ee4937b@10.251.54.236 - INVITE (With RTP)
+[Oct  3 19:55:22] DEBUG[18305]: chan_sip.c:5305 do_setnat: Setting NAT on RTP to On
+[Oct  3 19:55:22] DEBUG[18305]: chan_sip.c:24554 sip_request_call: ====================>call to 120.76.219.187 transport 1 nat 524288
+[Oct  3 19:55:22] DEBUG[18305]: acl.c:507 ast_ouraddrfor: Found IP address for this socket
+[Oct  3 19:55:22] DEBUG[18305]: chan_sip.c:3929 ast_sip_ouraddrfor: Setting SIP_TRANSPORT_UDP with address 121.42.190.150:65060
+[Oct  3 19:55:22] DEBUG[18305]: chan_sip.c:3839 build_via: =======================>build_via SIP/2.0/UDP 121.42.190.150:65060;branch=z9hG4bK10e63389;rport
+[Oct  3 19:55:22] DEBUG[18305]: chan_sip.c:7093 sip_new: ___________________________________________________begin
+[Oct  3 19:55:22] DEBUG[18305]: chan_sip.c:3648 sip_real_dst: Trying to putrecv destined for 120.76.219.187:5060sa destined for 120.76.219.187:5060ourip destined for 120.76.219.187:65060
+[Oct  3 19:55:22] DEBUG[18305]: chan_sip.c:7152 sip_new: ----->channel SIP/120.76.219.187:5060-00000247$120.76.219.187 ,domian 
+[Oct  3 19:55:22] DEBUG[18305]: chan_sip.c:7193 sip_new: *** Our native formats are 0x100 (g729) 
+[Oct  3 19:55:22] DEBUG[18305]: chan_sip.c:7194 sip_new: *** Joint capabilities are 0x100 (g729) 
+[Oct  3 19:55:22] DEBUG[18305]: chan_sip.c:7195 sip_new: *** Our capabilities are 0x50c (ulaw|alaw|g729|ilbc) 
+[Oct  3 19:55:22] DEBUG[18305]: chan_sip.c:7196 sip_new: *** AST_CODEC_CHOOSE formats are 0x100 (g729) 
+[Oct  3 19:55:22] DEBUG[18305]: chan_sip.c:7198 sip_new: *** Our preferred formats from the incoming channel are 0x100 (g729) 
+[Oct  3 19:55:22] DEBUG[18305]: chan_sip.c:7226 sip_new: This channel will not be able to handle video.
+[Oct  3 19:55:22] DEBUG[18305]: chan_sip.c:7334 sip_new: ___________________________________________________end
+[Oct  3 19:55:22] DEBUG[18305]: rtp.c:2359 ast_rtp_make_compatible: Seeded SDP of 'SIP/120.76.219.187:5060-00000247$120.76.219.187' with that of 'SIP/18850161016-00000246$163.125.241.241'
+[Oct  3 19:55:22] DEBUG[18305]: channel.c:4703 ast_channel_inherit_variables: Not copying variable DIALEDTIME.
+[Oct  3 19:55:22] DEBUG[18305]: channel.c:4703 ast_channel_inherit_variables: Not copying variable ANSWEREDTIME.
+[Oct  3 19:55:22] DEBUG[18305]: channel.c:4703 ast_channel_inherit_variables: Not copying variable DIALEDPEERNAME.
+[Oct  3 19:55:22] DEBUG[18305]: channel.c:4703 ast_channel_inherit_variables: Not copying variable DIALEDPEERNUMBER.
+[Oct  3 19:55:22] DEBUG[18305]: channel.c:4703 ast_channel_inherit_variables: Not copying variable DIALSTATUS.
+[Oct  3 19:55:22] DEBUG[18305]: channel.c:4703 ast_channel_inherit_variables: Not copying variable called2.
+[Oct  3 19:55:22] DEBUG[18305]: channel.c:4703 ast_channel_inherit_variables: Not copying variable sesstiontime.
+[Oct  3 19:55:22] DEBUG[18305]: channel.c:4703 ast_channel_inherit_variables: Not copying variable called.
+[Oct  3 19:55:22] DEBUG[18305]: channel.c:4703 ast_channel_inherit_variables: Not copying variable X-SVSS-remote-caller.
+[Oct  3 19:55:22] DEBUG[18305]: channel.c:4703 ast_channel_inherit_variables: Not copying variable SIPCALLID.
+[Oct  3 19:55:22] DEBUG[18305]: channel.c:4703 ast_channel_inherit_variables: Not copying variable SIPDOMAIN.
+[Oct  3 19:55:22] DEBUG[18305]: channel.c:4703 ast_channel_inherit_variables: Not copying variable SIPURI.
+[Oct  3 19:55:22] DEBUG[18305]: chan_sip.c:5756 sip_call: Outgoing Call for 98118850161016
+[Oct  3 19:55:22] DEBUG[18305]: chan_sip.c:3648 sip_real_dst: Trying to putrecv destined for 120.76.219.187:5060sa destined for 120.76.219.187:5060ourip destined for 120.76.219.187:65060
+[Oct  3 19:55:22] DEBUG[18305]: chan_sip.c:5993 update_call_counter: ==========>Updating call counter for outgoing call  chdestGatewayIp 120.76.219.187, username 98118850161016
+[Oct  3 19:55:22] DEBUG[18305]: chan_sip.c:6032 update_call_counter: =====>98118850161016 is not a local device, no call limit
+[Oct  3 19:55:22] DEBUG[18305]: chan_sip.c:5781 sip_call: ----->set dest channel invitetime
+[Oct  3 19:55:22] DEBUG[18305]: chan_sip.c:11472 transmit_invite: ___________________________________________________begin
+[Oct  3 19:55:22] DEBUG[18305]: chan_sip.c:3839 build_via: =======================>build_via SIP/2.0/UDP 121.42.190.150:65060;branch=z9hG4bK717df65d;rport
+[Oct  3 19:55:22] DEBUG[18305]: chan_sip.c:10770 add_sdp: ** Our capability: 0x50c (ulaw|alaw|g729|ilbc) Video flag: False Text flag: False
+[Oct  3 19:55:22] DEBUG[18305]: chan_sip.c:10771 add_sdp: ** Our prefcodec: 0x100 (g729) 
+[Oct  3 19:55:22] DEBUG[18305]: chan_sip.c:10882 add_sdp: -- Done with adding codecs to SDP
+[Oct  3 19:55:22] DEBUG[18305]: chan_sip.c:11006 add_sdp: Done building SDP. Settling with this capability: 0x50c (ulaw|alaw|g729|ilbc)
+[Oct  3 19:55:22] DEBUG[18305]: chan_sip.c:3454 initialize_initreq: Initializing initreq for method INVITE - callid 1e32caf813ce155d76bcb4284900f25a@121.42.190.150
+[Oct  3 19:55:22] DEBUG[18305]: chan_sip.c:11596 transmit_invite: ___________________________________________________end
+[Oct  3 19:55:22] DEBUG[18305]: chan_sip.c:3648 sip_real_dst: Trying to putrecv destined for 120.76.219.187:5060sa destined for 120.76.219.187:5060ourip destined for 120.76.219.187:65060
+[Oct  3 19:55:22] DEBUG[18305]: chan_sip.c:3772 __sip_xmit: Trying to put 'INVITE sip:' onto UDP socket destined for 120.76.219.187:5060
+[Oct  3 19:55:22] DEBUG[18305]: app_dial.c:2149 dial_exec_full: ----->set dest channel invitetime
+    -- Called 98118850161016@120.76.219.187:5060
+[Oct  3 19:55:22] DEBUG[1314]: chan_sip.c:23157 handle_request_do: ----->Received SIP/2.0 (1) 
+[Oct  3 19:55:22] DEBUG[1314]: chan_sip.c:22607 handle_incoming: ___________________________________________________begin
+[Oct  3 19:55:22] DEBUG[1314]: chan_sip.c:22654 handle_incoming: ----->Received SIP/2.0 (1) - Command in SIP SIP/2.0
+[Oct  3 19:55:22] DEBUG[1314]: chan_sip.c:19052 handle_response: ___________________________________________________begin
+[Oct  3 19:55:22] DEBUG[1314]: chan_sip.c:19068 handle_response: ==========>rest 84 resp 100 
+[Oct  3 19:55:22] DEBUG[1314]: chan_sip.c:4426 __sip_semi_ack: (Provisional) Stopping retransmission (but retaining packet) on '1e32caf813ce155d76bcb4284900f25a@121.42.190.150' Request 102: Found
+[Oct  3 19:55:22] DEBUG[1314]: chan_sip.c:19202 handle_response: -----> set ringtime
+[Oct  3 19:55:22] DEBUG[1314]: chan_sip.c:18359 handle_response_invite: SIP response 100 to standard invite
+[Oct  3 19:55:22] DEBUG[1314]: chan_sip.c:19561 handle_response: ___________________________________________________end
+[Oct  3 19:55:22] DEBUG[18305]: rtp.c:1703 ast_rtp_read: Learned remote address is 202.68.205.109:12348 for strict RTP purposes, now protecting the port.
+[Oct  3 19:55:22] DEBUG[18305]: rtp.c:1767 ast_rtp_read: RTP NAT: Got audio from other end. Now sending to address 202.68.205.109:12348
+[Oct  3 19:55:22] DEBUG[1314]: chan_sip.c:23157 handle_request_do: ----->Received SIP/2.0 (1) 
+[Oct  3 19:55:22] DEBUG[1314]: chan_sip.c:22607 handle_incoming: ___________________________________________________begin
+[Oct  3 19:55:22] DEBUG[1314]: chan_sip.c:22654 handle_incoming: ----->Received SIP/2.0 (1) - Command in SIP SIP/2.0
+[Oct  3 19:55:22] DEBUG[1314]: chan_sip.c:19052 handle_response: ___________________________________________________begin
+[Oct  3 19:55:22] DEBUG[1314]: chan_sip.c:19068 handle_response: ==========>rest 83 resp 183 
+[Oct  3 19:55:22] DEBUG[1314]: chan_sip.c:4426 __sip_semi_ack: (Provisional) Stopping retransmission (but retaining packet) on '1e32caf813ce155d76bcb4284900f25a@121.42.190.150' Request 102: Found
+[Oct  3 19:55:22] DEBUG[1314]: chan_sip.c:19202 handle_response: -----> set ringtime
+[Oct  3 19:55:22] DEBUG[1314]: chan_sip.c:18359 handle_response_invite: SIP response 183 to standard invite
+[Oct  3 19:55:22] DEBUG[1314]: chan_sip.c:19561 handle_response: ___________________________________________________end
+    -- SIP/120.76.219.187:5060-00000247$120.76.219.187 is ringing
+[Oct  3 19:55:22] DEBUG[18305]: chan_sip.c:3648 sip_real_dst: Trying to putrecv destined for 163.125.241.241:64897sa destined for 163.125.241.241:6139ourip destined for 163.125.241.241:65061
+[Oct  3 19:55:22] DEBUG[18305]: chan_sip.c:3772 __sip_xmit: Trying to put 'SIP/2.0 180' onto UDP socket destined for 163.125.241.241:64897
+[Oct  3 19:55:22] DEBUG[18305]: chan_sip.c:3783 __sip_xmit: ---------->Trying to len(490) onto UDP socket destined for 163.125.241.241:64897
+[Oct  3 19:55:24] DEBUG[1314]: chan_sip.c:23157 handle_request_do: ----->Received SIP/2.0 (1) 
+[Oct  3 19:55:24] DEBUG[1314]: chan_sip.c:22607 handle_incoming: ___________________________________________________begin
+[Oct  3 19:55:24] DEBUG[1314]: chan_sip.c:22654 handle_incoming: ----->Received SIP/2.0 (1) - Command in SIP SIP/2.0
+[Oct  3 19:55:24] DEBUG[1314]: chan_sip.c:19052 handle_response: ___________________________________________________begin
+[Oct  3 19:55:24] DEBUG[1314]: chan_sip.c:19068 handle_response: ==========>rest 82 resp 180 
+[Oct  3 19:55:24] DEBUG[1314]: chan_sip.c:4426 __sip_semi_ack: (Provisional) Stopping retransmission (but retaining packet) on '1e32caf813ce155d76bcb4284900f25a@121.42.190.150' Request 102: Found
+[Oct  3 19:55:24] DEBUG[1314]: chan_sip.c:19202 handle_response: -----> set ringtime
+[Oct  3 19:55:24] DEBUG[1314]: chan_sip.c:18359 handle_response_invite: SIP response 180 to standard invite
+[Oct  3 19:55:24] DEBUG[1314]: chan_sip.c:8786 process_sdp: Processing session-level SDP v=0... UNSUPPORTED.
+[Oct  3 19:55:24] DEBUG[1314]: chan_sip.c:8786 process_sdp: Processing session-level SDP o=- 1475495722 1475495722 IN IP4 202.68.205.109... UNSUPPORTED.
+[Oct  3 19:55:24] DEBUG[1314]: chan_sip.c:8786 process_sdp: Processing session-level SDP s=VOS2009... UNSUPPORTED.
+[Oct  3 19:55:24] DEBUG[1314]: chan_sip.c:8786 process_sdp: Processing session-level SDP c=IN IP4 202.68.205.109... OK.
+[Oct  3 19:55:24] DEBUG[1314]: chan_sip.c:8786 process_sdp: Processing session-level SDP t=0 0... UNSUPPORTED.
+[Oct  3 19:55:24] DEBUG[1314]: chan_sip.c:8954 process_sdp: Processing media-level (audio) SDP a=rtpmap:18 G729/8000... OK.
+[Oct  3 19:55:24] DEBUG[1314]: chan_sip.c:8954 process_sdp: Processing media-level (audio) SDP a=fmtp:18 annexb=no... UNSUPPORTED.
+[Oct  3 19:55:24] DEBUG[1314]: chan_sip.c:8954 process_sdp: Processing media-level (audio) SDP a=sendrecv... OK.
+[Oct  3 19:55:24] DEBUG[1314]: chan_sip.c:3648 sip_real_dst: Trying to putrecv destined for 120.76.219.187:5060sa destined for 120.76.219.187:5060ourip destined for 120.76.219.187:65060
+[Oct  3 19:55:24] DEBUG[1314]: chan_sip.c:9024 process_sdp: ============================================================>call to
+[Oct  3 19:55:24] DEBUG[1314]: rtp.c:2796 ast_rtp_set_peer: ===========>Peer audio RTP is at port 120.76.219.187:12348
+[Oct  3 19:55:24] DEBUG[1314]: chan_sip.c:9173 process_sdp: We're settling with these formats: 0x100 (g729)
+[Oct  3 19:55:24] DEBUG[1314]: chan_sip.c:9178 process_sdp: We have an owner, now see if we need to change this call
+[Oct  3 19:55:24] DEBUG[1314]: chan_sip.c:19561 handle_response: ___________________________________________________end
+[Oct  3 19:55:24] DEBUG[1299]: devicestate.c:344 _ast_device_state: No provider found, checking channel drivers for SIP - 120.76.219.187:5060
+[Oct  3 19:55:24] DEBUG[1299]: chan_sip.c:24255 sip_devicestate: Checking device state for peer 120.76.219.187:5060
+[Oct  3 19:55:24] DEBUG[1299]: devicestate.c:462 do_state_change: Changing state for SIP/120.76.219.187:5060 - state 6 (Ringing)
+[Oct  3 19:55:24] DEBUG[1299]: devicestate.c:442 devstate_event: device 'SIP/120.76.219.187:5060' state '6'
+    -- SIP/120.76.219.187:5060-00000247$120.76.219.187 is ringing
+    -- SIP/120.76.219.187:5060-00000247$120.76.219.187 is making progress passing it to SIP/18850161016-00000246$163.125.241.241
+[Oct  3 19:55:24] DEBUG[18305]: chan_sip.c:11073 transmit_response_with_sdp: Setting framing from config on incoming call
+[Oct  3 19:55:24] DEBUG[18305]: chan_sip.c:10770 add_sdp: ** Our capability: 0x10c (ulaw|alaw|g729) Video flag: True Text flag: True
+[Oct  3 19:55:24] DEBUG[18305]: chan_sip.c:10771 add_sdp: ** Our prefcodec: 0x0 (nothing) 
+[Oct  3 19:55:24] DEBUG[18305]: chan_sip.c:10882 add_sdp: -- Done with adding codecs to SDP
+[Oct  3 19:55:24] DEBUG[18305]: chan_sip.c:11006 add_sdp: Done building SDP. Settling with this capability: 0x10c (ulaw|alaw|g729)
+[Oct  3 19:55:24] DEBUG[18305]: chan_sip.c:3648 sip_real_dst: Trying to putrecv destined for 163.125.241.241:64897sa destined for 163.125.241.241:6139ourip destined for 163.125.241.241:65061
+[Oct  3 19:55:24] DEBUG[18305]: chan_sip.c:3772 __sip_xmit: Trying to put 'SIP/2.0 183' onto UDP socket destined for 163.125.241.241:64897
+[Oct  3 19:55:24] DEBUG[18305]: chan_sip.c:3783 __sip_xmit: ---------->Trying to len(775) onto UDP socket destined for 163.125.241.241:64897
+[Oct  3 19:55:24] DEBUG[1317]: app_queue.c:1092 handle_statechange: Device 'SIP/120.76.219.187:5060' changed to state '6' (Ringing) but we don't care because they're not a member of any queue.
+[Oct  3 19:55:24] DEBUG[18305]: rtp.c:1703 ast_rtp_read: Learned remote address is 202.68.205.109:12348 for strict RTP purposes, now protecting the port.
+[Oct  3 19:55:24] DEBUG[18305]: rtp.c:1767 ast_rtp_read: RTP NAT: Got audio from other end. Now sending to address 202.68.205.109:12348
+[Oct  3 19:55:24] DEBUG[18305]: rtp.c:4181 ast_rtp_write: Ooh, format changed from unknown to g729
+[Oct  3 19:55:24] DEBUG[18305]: rtp.c:4207 ast_rtp_write: Created smoother: format: 256 ms: 20 len: 20
+[Oct  3 19:55:24] DEBUG[18305]: rtp.c:1285 ast_rtcp_read: RTCP NAT: Got RTCP from other end. Now sending to address 163.125.241.241:2913
+[Oct  3 19:55:24] DEBUG[18305]: rtp.c:1289 ast_rtcp_read: Got RTCP report of 40 bytes
+[Oct  3 19:55:24] DEBUG[18305]: rtp.c:1703 ast_rtp_read: Learned remote address is 163.125.241.241:2945 for strict RTP purposes, now protecting the port.
+[Oct  3 19:55:24] DEBUG[18305]: rtp.c:1767 ast_rtp_read: RTP NAT: Got audio from other end. Now sending to address 163.125.241.241:2945
+[Oct  3 19:55:24] DEBUG[18305]: rtp.c:4181 ast_rtp_write: Ooh, format changed from unknown to g729
+[Oct  3 19:55:24] DEBUG[18305]: rtp.c:4207 ast_rtp_write: Created smoother: format: 256 ms: 20 len: 20
+[Oct  3 19:55:29] DEBUG[18305]: rtp.c:1285 ast_rtcp_read: RTCP NAT: Got RTCP from other end. Now sending to address 163.125.241.241:2913
+[Oct  3 19:55:29] DEBUG[18305]: rtp.c:1289 ast_rtcp_read: Got RTCP report of 64 bytes
+[Oct  3 19:55:32] DEBUG[18305]: rtp.c:1289 ast_rtcp_read: Got RTCP report of 64 bytes
+[Oct  3 19:55:32] DEBUG[1314]: chan_sip.c:23157 handle_request_do: ----->Received SIP/2.0 (1) 
+[Oct  3 19:55:32] DEBUG[1314]: chan_sip.c:22607 handle_incoming: ___________________________________________________begin
+[Oct  3 19:55:32] DEBUG[1314]: chan_sip.c:22654 handle_incoming: ----->Received SIP/2.0 (1) - Command in SIP SIP/2.0
+[Oct  3 19:55:32] DEBUG[1314]: chan_sip.c:19052 handle_response: ___________________________________________________begin
+[Oct  3 19:55:32] DEBUG[1314]: chan_sip.c:19068 handle_response: ==========>rest 82 resp 180 
+[Oct  3 19:55:32] DEBUG[1314]: chan_sip.c:4426 __sip_semi_ack: (Provisional) Stopping retransmission (but retaining packet) on '1e32caf813ce155d76bcb4284900f25a@121.42.190.150' Request 102: Found
+[Oct  3 19:55:32] DEBUG[1314]: chan_sip.c:19202 handle_response: -----> set ringtime
+[Oct  3 19:55:32] DEBUG[1314]: chan_sip.c:18359 handle_response_invite: SIP response 180 to standard invite
+[Oct  3 19:55:32] DEBUG[1314]: chan_sip.c:8786 process_sdp: Processing session-level SDP v=0... UNSUPPORTED.
+[Oct  3 19:55:32] DEBUG[1314]: chan_sip.c:9312 process_sdp_o: Call 1e32caf813ce155d76bcb4284900f25a@121.42.190.150 responded to our reinvite without changing SDP version; ignoring SDP.
+[Oct  3 19:55:32] DEBUG[1314]: chan_sip.c:19561 handle_response: ___________________________________________________end
+    -- SIP/120.76.219.187:5060-00000247$120.76.219.187 is ringing
+    -- SIP/120.76.219.187:5060-00000247$120.76.219.187 is making progress passing it to SIP/18850161016-00000246$163.125.241.241
+[Oct  3 19:55:34] DEBUG[1314]: chan_sip.c:23157 handle_request_do: ----->Received SIP/2.0 (1) 
+[Oct  3 19:55:34] DEBUG[1314]: chan_sip.c:22607 handle_incoming: ___________________________________________________begin
+[Oct  3 19:55:34] DEBUG[1314]: chan_sip.c:22654 handle_incoming: ----->Received SIP/2.0 (1) - Command in SIP SIP/2.0
+[Oct  3 19:55:34] DEBUG[1314]: chan_sip.c:19052 handle_response: ___________________________________________________begin
+[Oct  3 19:55:34] DEBUG[1314]: chan_sip.c:19068 handle_response: ==========>rest 79 resp 200 
+[Oct  3 19:55:34] DEBUG[1314]: chan_sip.c:4341 __sip_ack: =============================Acked pending invite 102, old seqno 102, seqno 102 old resp 0, resp 0
+[Oct  3 19:55:34] DEBUG[1314]: chan_sip.c:4348 __sip_ack: Acked pending invite 102
+[Oct  3 19:55:34] DEBUG[1314]: chan_sip.c:4385 __sip_ack: Stopping retransmission on '1e32caf813ce155d76bcb4284900f25a@121.42.190.150' of Request 102: Match Found
+[Oct  3 19:55:34] DEBUG[1314]: chan_sip.c:18359 handle_response_invite: SIP response 200 to standard invite
+[Oct  3 19:55:34] DEBUG[1314]: chan_sip.c:8786 process_sdp: Processing session-level SDP v=0... UNSUPPORTED.
+[Oct  3 19:55:34] DEBUG[1314]: chan_sip.c:9312 process_sdp_o: Call 1e32caf813ce155d76bcb4284900f25a@121.42.190.150 responded to our reinvite without changing SDP version; ignoring SDP.
+[Oct  3 19:55:34] DEBUG[1314]: chan_sip.c:3648 sip_real_dst: Trying to putrecv destined for 120.76.219.187:5060sa destined for 120.76.219.187:5060ourip destined for 120.76.219.187:65060
+[Oct  3 19:55:34] DEBUG[1314]: chan_sip.c:5993 update_call_counter: ==========>Updating call counter for outgoing call  chdestGatewayIp 120.76.219.187, username 98118850161016
+[Oct  3 19:55:34] DEBUG[1314]: chan_sip.c:6032 update_call_counter: =====>98118850161016 is not a local device, no call limit
+[Oct  3 19:55:34] DEBUG[1314]: chan_sip.c:13161 build_route: build_route: Contact hop: <sip:98118850161016@120.76.219.187:5060>
+[Oct  3 19:55:34] DEBUG[1314]: chan_sip.c:23947 parse_session_expires: Session-Expires: 9999
+[Oct  3 19:55:34] DEBUG[1314]: chan_sip.c:23960 parse_session_expires: Refresher: UAC
+[Oct  3 19:55:34] DEBUG[1314]: chan_sip.c:23815 start_session_timer: Session timer started: 5418 - 1e32caf813ce155d76bcb4284900f25a@121.42.190.150
+[Oct  3 19:55:34] DEBUG[1314]: chan_sip.c:3839 build_via: =======================>build_via SIP/2.0/UDP 121.42.190.150:65060;branch=z9hG4bK78bb1d1a;rport
+[Oct  3 19:55:34] DEBUG[1314]: chan_sip.c:3648 sip_real_dst: Trying to putrecv destined for 120.76.219.187:5060sa destined for 120.76.219.187:5060ourip destined for 120.76.219.187:65060
+[Oct  3 19:55:34] DEBUG[1314]: chan_sip.c:3772 __sip_xmit: Trying to put 'ACK sip:981' onto UDP socket destined for 120.76.219.187:5060
+[Oct  3 19:55:34] DEBUG[1314]: chan_sip.c:19561 handle_response: ___________________________________________________end
+    -- SIP/120.76.219.187:5060-00000247$120.76.219.187 answered SIP/18850161016-00000246$163.125.241.241
+[Oct  3 19:55:34] DEBUG[18305]: chan_sip.c:6614 sip_answer: SIP answering channel: SIP/18850161016-00000246$163.125.241.241, delaysendok -1
+[Oct  3 19:55:34] DEBUG[18305]: rtp.c:2778 ast_rtp_new_source: Setting the marker bit due to a source update
+[Oct  3 19:55:34] DEBUG[18305]: chan_sip.c:11073 transmit_response_with_sdp: Setting framing from config on incoming call
+[Oct  3 19:55:34] DEBUG[18305]: chan_sip.c:10770 add_sdp: ** Our capability: 0x10c (ulaw|alaw|g729) Video flag: True Text flag: True
+[Oct  3 19:55:34] DEBUG[18305]: chan_sip.c:10771 add_sdp: ** Our prefcodec: 0x0 (nothing) 
+[Oct  3 19:55:34] DEBUG[18305]: chan_sip.c:10882 add_sdp: -- Done with adding codecs to SDP
+[Oct  3 19:55:34] DEBUG[18305]: chan_sip.c:11006 add_sdp: Done building SDP. Settling with this capability: 0x10c (ulaw|alaw|g729)
+[Oct  3 19:55:34] DEBUG[18305]: chan_sip.c:3648 sip_real_dst: Trying to putrecv destined for 163.125.241.241:64897sa destined for 163.125.241.241:6139ourip destined for 163.125.241.241:65061
+[Oct  3 19:55:34] DEBUG[18305]: chan_sip.c:3772 __sip_xmit: Trying to put 'SIP/2.0 200' onto UDP socket destined for 163.125.241.241:64897
+[Oct  3 19:55:34] DEBUG[18305]: chan_sip.c:3783 __sip_xmit: ---------->Trying to len(761) onto UDP socket destined for 163.125.241.241:64897
+[Oct  3 19:55:34] DEBUG[18305]: features.c:2609 ast_bridge_call: bridge answer set, chan answer set
+[Oct  3 19:55:34] DEBUG[18305]: rtp.c:2778 ast_rtp_new_source: Setting the marker bit due to a source update
+[Oct  3 19:55:34] DEBUG[18305]: rtp.c:2778 ast_rtp_new_source: Setting the marker bit due to a source update
+    -- Native bridging SIP/18850161016-00000246$163.125.241.241 and SIP/120.76.219.187:5060-00000247$120.76.219.187
+[Oct  3 19:55:34] DEBUG[1299]: devicestate.c:344 _ast_device_state: No provider found, checking channel drivers for SIP - 120.76.219.187:5060
+[Oct  3 19:55:34] DEBUG[1299]: chan_sip.c:24255 sip_devicestate: Checking device state for peer 120.76.219.187:5060
+[Oct  3 19:55:34] DEBUG[1299]: devicestate.c:462 do_state_change: Changing state for SIP/120.76.219.187:5060 - state 2 (In use)
+[Oct  3 19:55:34] DEBUG[1299]: devicestate.c:442 devstate_event: device 'SIP/120.76.219.187:5060' state '2'
+[Oct  3 19:55:34] DEBUG[1299]: devicestate.c:344 _ast_device_state: No provider found, checking channel drivers for SIP - 18850161016
+[Oct  3 19:55:34] DEBUG[1299]: chan_sip.c:24255 sip_devicestate: Checking device state for peer 18850161016
+[Oct  3 19:55:34] DEBUG[1299]: devicestate.c:462 do_state_change: Changing state for SIP/18850161016 - state 2 (In use)
+[Oct  3 19:55:34] DEBUG[1299]: devicestate.c:442 devstate_event: device 'SIP/18850161016' state '2'
+[Oct  3 19:55:34] DEBUG[1317]: app_queue.c:1092 handle_statechange: Device 'SIP/120.76.219.187:5060' changed to state '2' (In use) but we don't care because they're not a member of any queue.
+[Oct  3 19:55:34] DEBUG[1317]: app_queue.c:1092 handle_statechange: Device 'SIP/18850161016' changed to state '2' (In use) but we don't care because they're not a member of any queue.
+[Oct  3 19:55:34] DEBUG[1314]: chan_sip.c:23123 rc4SockRead: ----->rc4key 51dyt51dyt req data ACK sip:98118850161016%23203256@121.42.190.150:65061;transport=UDP SIP/2.0
+Via: SIP/2.0/UDP 192.168.1.105:6139;branch=z9hG4bK808403011
+From: <sip:18850161016@121.42.190.150:65061>;tag=1775132302
+To: <sip:98118850161016%23203256@121.42.190.150:65061>;tag=as18530c60
+Call-ID: 803239365
+CSeq: 21 ACK
+Contact: <sip:18850161016@163.125.241.241:6139>
+Max-Forwards: 70
+User-Agent: Android/v4
+Content-Length: 0
+
+
+[Oct  3 19:55:34] DEBUG[1314]: chan_sip.c:23157 handle_request_do: ----->Received ACK (6) 
+[Oct  3 19:55:34] DEBUG[1314]: chan_sip.c:22607 handle_incoming: ___________________________________________________begin
+[Oct  3 19:55:34] DEBUG[1314]: chan_sip.c:22654 handle_incoming: ----->Received ACK (6) - Command in SIP ACK
+[Oct  3 19:55:34] DEBUG[1314]: chan_sip.c:22693 handle_incoming: **** Received ACK (6) - Command in SIP ACK
+[Oct  3 19:55:34] DEBUG[1314]: chan_sip.c:22701 handle_incoming: ----->set p SIP/18850161016-00000246$163.125.241.241 dest channel ringtime 0 starttime 1475495722 ringsessiontime 0
+[Oct  3 19:55:34] DEBUG[1314]: chan_sip.c:22707 handle_incoming: ------> Received ACK (6) - Command in SIP ACK icseq 21,seqno 21
+[Oct  3 19:55:34] DEBUG[1314]: chan_sip.c:4341 __sip_ack: =============================Acked pending invite 0, old seqno 21, seqno 21 old resp 1, resp 1
+[Oct  3 19:55:34] DEBUG[1314]: chan_sip.c:4385 __sip_ack: Stopping retransmission on '803239365' of Response 21: Match Found
+[Oct  3 19:55:34] DEBUG[1314]: chan_sip.c:22932 handle_incoming: ___________________________________________________end
+[Oct  3 19:55:36] DEBUG[18305]: rtp.c:1289 ast_rtcp_read: Got RTCP report of 64 bytes
+[Oct  3 19:55:40] DEBUG[18305]: rtp.c:1289 ast_rtcp_read: Got RTCP report of 64 bytes
+[Oct  3 19:55:41] DEBUG[1314]: chan_sip.c:23123 rc4SockRead: ----->rc4key 51dyt51dyt req data BYE sip:98118850161016%23203256@121.42.190.150:65061;transport=UDP SIP/2.0
+Via: SIP/2.0/UDP 192.168.1.105:6139;branch=z9hG4bK669654682
+From: <sip:18850161016@121.42.190.150:65061>;tag=1775132302
+To: <sip:98118850161016%23203256@121.42.190.150:65061>;tag=as18530c60
+Call-ID: 803239365
+CSeq: 22 BYE
+Contact: <sip:18850161016@192.168.1.105:6139>
+Max-Forwards: 70
+User-Agent: Android/v4
+Content-Length: 0
+
+
+[Oct  3 19:55:41] DEBUG[1314]: chan_sip.c:23157 handle_request_do: ----->Received BYE (8) 
+[Oct  3 19:55:41] DEBUG[1314]: chan_sip.c:22607 handle_incoming: ___________________________________________________begin
+[Oct  3 19:55:41] DEBUG[1314]: chan_sip.c:22654 handle_incoming: ----->Received BYE (8) - Command in SIP BYE
+[Oct  3 19:55:41] DEBUG[1314]: chan_sip.c:22693 handle_incoming: **** Received BYE (8) - Command in SIP BYE
+[Oct  3 19:55:41] DEBUG[1314]: chan_sip.c:22701 handle_incoming: ----->set p SIP/18850161016-00000246$163.125.241.241 dest channel ringtime 0 starttime 1475495722 ringsessiontime 0
+[Oct  3 19:55:41] DEBUG[1314]: chan_sip.c:22707 handle_incoming: ------> Received BYE (8) - Command in SIP BYE icseq 21,seqno 22
+[Oct  3 19:55:41] DEBUG[1314]: chan_sip.c:22737 handle_incoming: ------> Received BYE (8) - Command in SIP BYE p->owner->hangupcause 930
+[Oct  3 19:55:41] DEBUG[1314]: chan_sip.c:3465 sip_alreadygone: Setting SIP_ALREADYGONE on dialog 803239365
+[Oct  3 19:55:41] DEBUG[1314]: chan_sip.c:23796 stop_session_timer: Session timer stopped: -1 - 803239365
+[Oct  3 19:55:41] DEBUG[1314]: chan_sip.c:22181 handle_request_bye: Received bye, issuing owner hangup
+[Oct  3 19:55:41] DEBUG[1314]: chan_sip.c:3648 sip_real_dst: Trying to putrecv destined for 163.125.241.241:64897sa destined for 163.125.241.241:6139ourip destined for 163.125.241.241:65061
+[Oct  3 19:55:41] DEBUG[1314]: chan_sip.c:3772 __sip_xmit: Trying to put 'SIP/2.0 200' onto UDP socket destined for 163.125.241.241:64897
+[Oct  3 19:55:41] DEBUG[1314]: chan_sip.c:3783 __sip_xmit: ---------->Trying to len(409) onto UDP socket destined for 163.125.241.241:64897
+[Oct  3 19:55:41] DEBUG[1314]: chan_sip.c:22932 handle_incoming: ___________________________________________________end
+[Oct  3 19:55:41] DEBUG[18305]: rtp.c:4397 bridge_native_loop: Oooh, got a hangup
+[Oct  3 19:55:41] DEBUG[18305]: channel.c:5603 ast_channel_bridge: Returning from native bridge, channels: SIP/18850161016-00000246$163.125.241.241, SIP/120.76.219.187:5060-00000247$120.76.219.187
+[Oct  3 19:55:41] DEBUG[18305]: cdr.c:1041 ast_cdr_hangupcause: ----->ihangupsipcause 930
+[Oct  3 19:55:41] DEBUG[18305]: cdr.c:1557 ast_cdr_detach: ----->Hanging up zombie
+[Oct  3 19:55:41] DEBUG[18305]: cdr.c:1584 ast_cdr_detach: ----->Hanging up zombie
+[Oct  3 19:55:41] DEBUG[18305]: cdr.c:1320 post_cdr: ----->Hanging up zombie chanType 0
+[Oct  3 19:55:41] DEBUG[18305]: cdr.c:1041 ast_cdr_hangupcause: ----->ihangupsipcause 930
+[Oct  3 19:55:41] DEBUG[18305]: cdr.c:1344 post_cdr: ----->Hanging up zombie chanType 2 disposition 8!ast_test_flag(cdr, AST_CDR_FLAG_ORIGINATED) 1 channel SIP/18850161016-00000246$163.125.241.241dest channel SIP/120.76.219.187:5060-00000247$120.76.219.187
+[Oct  3 19:55:41] DEBUG[18305]: cdr.c:405 ast_cdr_getvar: cdr->userfield = '' cdr->src '18850161016'
+[Oct  3 19:55:41] DEBUG[18305]: cdr_addon_mysql.c:322 mysql_log: Inserting a CDR record.
+[Oct  3 19:55:41] NOTICE[18305]: cdr_addon_mysql.c:325 mysql_log: SQL command as follows: INSERT INTO virgincdr (callSessionID,deviceName,sysAcctName,callStartTime,callStopTime,callSessionTime,CallingTelNum,calledTelNum,callSourceIP,callServerIP,callDestIP,callProtocol,AcctTerminateCause,ringSessionTime,AcctTerminateDirection) VALUES ('1475495722.582','18850161016','STOPCDR','2016-10-03 19:55:22','2016-10-03 19:55:41','7','18850161016','98118850161016#203256','163.125.241.241','121.42.190.150','120.76.219.187','SIP','930','19','source')
+[Oct  3 19:55:41] DEBUG[18305]: channel.c:1877 ast_hangup: Hanging up channel 'SIP/120.76.219.187:5060-00000247$120.76.219.187'
+[Oct  3 19:55:41] DEBUG[18305]: chan_sip.c:6419 sip_hangup: Hangup call SIP/120.76.219.187:5060-00000247$120.76.219.187, SIP callid 1e32caf813ce155d76bcb4284900f25a@121.42.190.150
+[Oct  3 19:55:41] DEBUG[18305]: chan_sip.c:23796 stop_session_timer: Session timer stopped: -1 - 1e32caf813ce155d76bcb4284900f25a@121.42.190.150
+[Oct  3 19:55:41] DEBUG[18305]: chan_sip.c:3839 build_via: =======================>build_via SIP/2.0/UDP 121.42.190.150:65060;branch=z9hG4bK7c4e13ee;rport
+[Oct  3 19:55:41] DEBUG[18305]: chan_sip.c:3648 sip_real_dst: Trying to putrecv destined for 120.76.219.187:5060sa destined for 120.76.219.187:5060ourip destined for 120.76.219.187:65060
+[Oct  3 19:55:41] DEBUG[18305]: chan_sip.c:3772 __sip_xmit: Trying to put 'BYE sip:981' onto UDP socket destined for 120.76.219.187:5060
+[Oct  3 19:55:41] DEBUG[18305]: channel.c:1923 ast_hangup: Hanging up zombie 'SIP/120.76.219.187:5060-00000247$120.76.219.187' disposition 1, disposition 1
+[Oct  3 19:55:41] DEBUG[18305]: cdr.c:1041 ast_cdr_hangupcause: ----->ihangupsipcause 200
+[Oct  3 19:55:41] DEBUG[18305]: cdr.c:1161 ast_cdr_end: CDR on channel 'SIP/120.76.219.187:5060-00000247$120.76.219.187' has no answer time but is 'ANSWERED'
+[Oct  3 19:55:41] DEBUG[18305]: channel.c:1934 ast_hangup: Hanging up zombie 'SIP/120.76.219.187:5060-00000247$120.76.219.187' disposition 1, disposition 1
+[Oct  3 19:55:41] DEBUG[18305]: rtp.c:2236 ast_rtp_early_bridge: Channel '<unspecified>' has no RTP, not doing anything
+[Oct  3 19:55:41] DEBUG[18305]: app_dial.c:2786 dial_exec_full: Exiting with DIALSTATUS=ANSWER.
+[Oct  3 19:55:41] DEBUG[18305]: pbx.c:4318 __ast_pbx_run: Spawn extension (default,98118850161016#203256,6) exited non-zero on 'SIP/18850161016-00000246$163.125.241.241'
+  == Spawn extension (default, 98118850161016#203256, 6) exited non-zero on 'SIP/18850161016-00000246$163.125.241.241'
+[Oct  3 19:55:41] DEBUG[18305]: channel.c:1763 ast_softhangup_nolock: Soft-Hanging up channel 'SIP/18850161016-00000246$163.125.241.241'
+[Oct  3 19:55:41] DEBUG[18305]: channel.c:1877 ast_hangup: Hanging up channel 'SIP/18850161016-00000246$163.125.241.241'
+[Oct  3 19:55:41] DEBUG[18305]: chan_sip.c:6419 sip_hangup: Hangup call SIP/18850161016-00000246$163.125.241.241, SIP callid 803239365
+[Oct  3 19:55:41] DEBUG[18305]: chan_sip.c:3648 sip_real_dst: Trying to putrecv destined for 163.125.241.241:64897sa destined for 163.125.241.241:6139ourip destined for 163.125.241.241:65061
+[Oct  3 19:55:41] DEBUG[18305]: chan_sip.c:5993 update_call_counter: ==========>Updating call counter for incoming call  chdestGatewayIp 163.125.241.241, username 18850161016
+[Oct  3 19:55:41] DEBUG[18305]: chan_sip.c:6027 update_call_counter: =====> find peer 18850161016  a local device, in use 1
+[Oct  3 19:55:41] DEBUG[18305]: channel.c:1923 ast_hangup: Hanging up zombie 'SIP/18850161016-00000246$163.125.241.241' disposition 1, disposition 1
+[Oct  3 19:55:41] DEBUG[18305]: cdr.c:1041 ast_cdr_hangupcause: ----->ihangupsipcause 930
+[Oct  3 19:55:41] DEBUG[18305]: cdr.c:1161 ast_cdr_end: CDR on channel 'SIP/18850161016-00000246$163.125.241.241' has no answer time but is 'ANSWERED'
+[Oct  3 19:55:41] DEBUG[18305]: channel.c:1934 ast_hangup: Hanging up zombie 'SIP/18850161016-00000246$163.125.241.241' disposition 1, disposition 1
+[Oct  3 19:55:41] DEBUG[1299]: devicestate.c:344 _ast_device_state: No provider found, checking channel drivers for SIP - 120.76.219.187:5060
+[Oct  3 19:55:41] DEBUG[1299]: chan_sip.c:24255 sip_devicestate: Checking device state for peer 120.76.219.187:5060
+[Oct  3 19:55:41] DEBUG[1299]: devicestate.c:462 do_state_change: Changing state for SIP/120.76.219.187:5060 - state 0 (Unknown)
+[Oct  3 19:55:41] DEBUG[1299]: devicestate.c:442 devstate_event: device 'SIP/120.76.219.187:5060' state '0'
+[Oct  3 19:55:41] DEBUG[1299]: devicestate.c:344 _ast_device_state: No provider found, checking channel drivers for SIP - 18850161016
+[Oct  3 19:55:41] DEBUG[1299]: chan_sip.c:24255 sip_devicestate: Checking device state for peer 18850161016
+[Oct  3 19:55:41] DEBUG[1299]: devicestate.c:462 do_state_change: Changing state for SIP/18850161016 - state 1 (Not in use)
+[Oct  3 19:55:41] DEBUG[1299]: devicestate.c:442 devstate_event: device 'SIP/18850161016' state '1'
+[Oct  3 19:55:41] DEBUG[1299]: devicestate.c:344 _ast_device_state: No provider found, checking channel drivers for SIP - 18850161016
+[Oct  3 19:55:41] DEBUG[1299]: chan_sip.c:24255 sip_devicestate: Checking device state for peer 18850161016
+[Oct  3 19:55:41] DEBUG[1299]: devicestate.c:462 do_state_change: Changing state for SIP/18850161016 - state 1 (Not in use)
+[Oct  3 19:55:41] DEBUG[1299]: devicestate.c:442 devstate_event: device 'SIP/18850161016' state '1'
+[Oct  3 19:55:41] DEBUG[1317]: app_queue.c:1092 handle_statechange: Device 'SIP/120.76.219.187:5060' changed to state '0' (Unknown) but we don't care because they're not a member of any queue.
+[Oct  3 19:55:41] DEBUG[1317]: app_queue.c:1092 handle_statechange: Device 'SIP/18850161016' changed to state '1' (Not in use) but we don't care because they're not a member of any queue.
+[Oct  3 19:55:41] DEBUG[1317]: app_queue.c:1092 handle_statechange: Device 'SIP/18850161016' changed to state '1' (Not in use) but we don't care because they're not a member of any queue.
+[Oct  3 19:55:41] DEBUG[1314]: chan_sip.c:23157 handle_request_do: ----->Received SIP/2.0 (1) 
+[Oct  3 19:55:41] DEBUG[1314]: chan_sip.c:22607 handle_incoming: ___________________________________________________begin
+[Oct  3 19:55:41] DEBUG[1314]: chan_sip.c:22654 handle_incoming: ----->Received SIP/2.0 (1) - Command in SIP SIP/2.0
+[Oct  3 19:55:41] DEBUG[1314]: chan_sip.c:19052 handle_response: ___________________________________________________begin
+[Oct  3 19:55:41] DEBUG[1314]: chan_sip.c:19068 handle_response: ==========>rest 79 resp 200 
+[Oct  3 19:55:41] DEBUG[1314]: chan_sip.c:4341 __sip_ack: =============================Acked pending invite 0, old seqno 103, seqno 103 old resp 0, resp 0
+[Oct  3 19:55:41] DEBUG[1314]: chan_sip.c:4385 __sip_ack: Stopping retransmission on '1e32caf813ce155d76bcb4284900f25a@121.42.190.150' of Request 103: Match Found
+[Oct  3 19:55:41] DEBUG[1314]: chan_sip.c:19561 handle_response: ___________________________________________________end
+[Oct  3 19:55:41] DEBUG[1314]: chan_sip.c:6201 sip_destroy: Destroying SIP dialog 1e32caf813ce155d76bcb4284900f25a@121.42.190.150
+[Oct  3 19:55:41] DEBUG[1314]: chan_sip.c:6201 sip_destroy: Destroying SIP dialog 803239365
+[Oct  3 19:55:41] DEBUG[1314]: chan_sip.c:23123 rc4SockRead: ----->rc4key 51dyt51dyt req data y븖k
+[Oct  3 19:55:41] DEBUG[1314]: chan_sip.c:11125 determine_firstline_parts: Skipping packet - Bad request protocol 
+[Oct  3 19:55:41] DEBUG[1314]: chan_sip.c:23152 handle_request_do: ----->rc4key 51dyt51dyt
+[Oct  3 19:55:41] DEBUG[1314]: chan_sip.c:23123 rc4SockRead: ----->rc4key 51dyt51dyt req data y븖k
+[Oct  3 19:55:41] DEBUG[1314]: chan_sip.c:11125 determine_firstline_parts: Skipping packet - Bad request protocol 
+[Oct  3 19:55:41] DEBUG[1314]: chan_sip.c:23152 handle_request_do: ----->rc4key 51dyt51dyt
+[Oct  3 19:55:42] DEBUG[1314]: chan_sip.c:23123 rc4SockRead: ----->rc4key 51dyt51dyt req data y븖k
+[Oct  3 19:55:42] DEBUG[1314]: chan_sip.c:11125 determine_firstline_parts: Skipping packet - Bad request protocol 
+[Oct  3 19:55:42] DEBUG[1314]: chan_sip.c:23152 handle_request_do: ----->rc4key 51dyt51dyt

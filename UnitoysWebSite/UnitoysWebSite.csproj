@@ -1,0 +1,430 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{BA6BE569-D3A0-412A-AF57-5CBABC5EB443}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>UnitoysWebSite</RootNamespace>
+    <AssemblyName>UnitoysWebSite</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <MvcBuildViews>false</MvcBuildViews>
+    <UseIISExpress>true</UseIISExpress>
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Data.Entity" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Web.Abstractions" />
+    <Reference Include="System.Web.Routing" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="Microsoft.Web.Infrastructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.Web.Infrastructure.1.0.0.0\lib\net40\Microsoft.Web.Infrastructure.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.Http">
+    </Reference>
+    <Reference Include="System.Net.Http.WebRequest">
+    </Reference>
+    <Reference Include="System.Web.Helpers, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.0.0\lib\net45\System.Web.Helpers.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Mvc, Version=5.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.Mvc.5.0.0\lib\net45\System.Web.Mvc.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Optimization">
+      <HintPath>..\packages\Microsoft.AspNet.Web.Optimization.1.1.1\lib\net40\System.Web.Optimization.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Razor, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.Razor.3.0.0\lib\net45\System.Web.Razor.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.0.0\lib\net45\System.Web.WebPages.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Deployment, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.0.0\lib\net45\System.Web.WebPages.Deployment.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Razor, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.0.0\lib\net45\System.Web.WebPages.Razor.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json">
+      <Private>True</Private>
+      <HintPath>..\packages\Newtonsoft.Json.5.0.6\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="WebGrease">
+      <Private>True</Private>
+      <HintPath>..\packages\WebGrease.1.5.2\lib\WebGrease.dll</HintPath>
+    </Reference>
+    <Reference Include="Antlr3.Runtime">
+      <Private>True</Private>
+      <HintPath>..\packages\Antlr.3.4.1.9004\lib\Antlr3.Runtime.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="App_Data\" />
+    <Folder Include="Areas\cn\Models\" />
+    <Folder Include="Areas\en\Models\" />
+    <Folder Include="Models\" />
+    <Folder Include="Views\Down\" />
+    <Folder Include="Views\Home\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="App_Start\BundleConfig.cs" />
+    <Compile Include="App_Start\FilterConfig.cs" />
+    <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="Areas\cn\cnAreaRegistration.cs" />
+    <Compile Include="Areas\cn\Controllers\HomeController.cs" />
+    <Compile Include="Areas\en\Controllers\HomeController.cs" />
+    <Compile Include="Areas\en\enAreaRegistration.cs" />
+    <Compile Include="Controllers\DownController.cs" />
+    <Compile Include="Controllers\IndexController.cs" />
+    <Compile Include="Controllers\WxController.cs" />
+    <Compile Include="Controllers\zhongchouController.cs" />
+    <Compile Include="Core\WebHelper.cs" />
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Content\css\animate.css" />
+    <Content Include="Content\css\jquery.jscrollpane.css" />
+    <Content Include="Content\css\owl.carousel.css" />
+    <Content Include="Content\css\style.css" />
+    <Content Include="Content\en\css\animate.css" />
+    <Content Include="Content\en\css\jquery.jscrollpane.css" />
+    <Content Include="Content\en\css\owl.carousel.css" />
+    <Content Include="Content\en\css\style.css" />
+    <Content Include="Content\en\images\btn_downapk.png" />
+    <Content Include="Content\en\images\btn_more.png" />
+    <Content Include="Content\en\images\btn_page1buy.png" />
+    <Content Include="Content\en\images\btn_submit.png" />
+    <Content Include="Content\en\images\btn_topbuy.png" />
+    <Content Include="Content\en\images\country\africa\nanfei.jpg" />
+    <Content Include="Content\en\images\country\asia\aomen.jpg" />
+    <Content Include="Content\en\images\country\asia\feilvbin.jpg" />
+    <Content Include="Content\en\images\country\asia\hanguo.jpg" />
+    <Content Include="Content\en\images\country\asia\hasake.jpg" />
+    <Content Include="Content\en\images\country\asia\malaixiya.jpg" />
+    <Content Include="Content\en\images\country\asia\riben.jpg" />
+    <Content Include="Content\en\images\country\asia\taiguo.jpg" />
+    <Content Include="Content\en\images\country\asia\taiwan.jpg" />
+    <Content Include="Content\en\images\country\asia\xianggang.jpg" />
+    <Content Include="Content\en\images\country\asia\xinjiapo.jpg" />
+    <Content Include="Content\en\images\country\asia\yinni.jpg" />
+    <Content Include="Content\en\images\country\europe\aierlan.jpg" />
+    <Content Include="Content\en\images\country\europe\aodili.jpg" />
+    <Content Include="Content\en\images\country\europe\aozhou31guo.jpg" />
+    <Content Include="Content\en\images\country\europe\beiaierlan.jpg" />
+    <Content Include="Content\en\images\country\europe\bilishi.jpg" />
+    <Content Include="Content\en\images\country\europe\danmai.jpg" />
+    <Content Include="Content\en\images\country\europe\deguo.jpg" />
+    <Content Include="Content\en\images\country\europe\eluosi.jpg" />
+    <Content Include="Content\en\images\country\europe\faguo.jpg" />
+    <Content Include="Content\en\images\country\europe\fandigang.jpg" />
+    <Content Include="Content\en\images\country\europe\helan.jpg" />
+    <Content Include="Content\en\images\country\europe\jieke.jpg" />
+    <Content Include="Content\en\images\country\europe\keluodiya.jpg" />
+    <Content Include="Content\en\images\country\europe\litaowan.jpg" />
+    <Content Include="Content\en\images\country\europe\luomaniya.jpg" />
+    <Content Include="Content\en\images\country\europe\lusenbao.jpg" />
+    <Content Include="Content\en\images\country\europe\nuowei.jpg" />
+    <Content Include="Content\en\images\country\europe\putaoya.jpg" />
+    <Content Include="Content\en\images\country\europe\ruidian.jpg" />
+    <Content Include="Content\en\images\country\europe\shengmaliya.jpg" />
+    <Content Include="Content\en\images\country\europe\sugelan.jpg" />
+    <Content Include="Content\en\images\country\europe\tuerqi.jpg" />
+    <Content Include="Content\en\images\country\europe\xibanya.jpg" />
+    <Content Include="Content\en\images\country\europe\xila.jpg" />
+    <Content Include="Content\en\images\country\europe\yidali.jpg" />
+    <Content Include="Content\en\images\country\europe\yingguo.jpg" />
+    <Content Include="Content\en\images\country\oceania\aozhou.jpg" />
+    <Content Include="Content\en\images\country\oceania\xinxilan.jpg" />
+    <Content Include="Content\en\images\favicon-16x16.ico" />
+    <Content Include="Content\en\images\favicon-32x32.ico" />
+    <Content Include="Content\en\images\logo.png" />
+    <Content Include="Content\en\images\page1_bg.jpg" />
+    <Content Include="Content\en\images\page1_title1.png" />
+    <Content Include="Content\en\images\page1_title2.png" />
+    <Content Include="Content\en\images\page2_product.png" />
+    <Content Include="Content\en\images\page2_title1.png" />
+    <Content Include="Content\en\images\page3_3_desc.png" />
+    <Content Include="Content\en\images\page3_3_product.png" />
+    <Content Include="Content\en\images\page3_bg.jpg" />
+    <Content Include="Content\en\images\page3_bg.png" />
+    <Content Include="Content\en\images\page3_bracelet.png" />
+    <Content Include="Content\en\images\page3_iphone.png" />
+    <Content Include="Content\en\images\page3_jiahao.png" />
+    <Content Include="Content\en\images\page3_title.png" />
+    <Content Include="Content\en\images\page4_2_map.jpg" />
+    <Content Include="Content\en\images\page4_2_map_light.png" />
+    <Content Include="Content\en\images\page4_2_title.png" />
+    <Content Include="Content\en\images\page4_img1.jpg" />
+    <Content Include="Content\en\images\page4_img2.jpg" />
+    <Content Include="Content\en\images\page4_img3.jpg" />
+    <Content Include="Content\en\images\page5_title.png" />
+    <Content Include="Content\en\images\page6_free.png" />
+    <Content Include="Content\en\images\page6_free1.png" />
+    <Content Include="Content\en\images\page6_free2.png" />
+    <Content Include="Content\en\images\page6_title.png" />
+    <Content Include="Content\en\images\page7_iphone.png" />
+    <Content Include="Content\en\images\page7_qrcode.jpg" />
+    <Content Include="Content\en\images\page8_a.jpg" />
+    <Content Include="Content\en\images\page8_q.jpg" />
+    <Content Include="Content\en\images\page8_title.png" />
+    <Content Include="Content\en\images\page9_qq.png" />
+    <Content Include="Content\en\images\page9_title.png" />
+    <Content Include="Content\en\images\page9_weibo.png" />
+    <Content Include="Content\en\images\page9_weixin.png" />
+    <Content Include="Content\en\images\product_page.jpg" />
+    <Content Include="Content\en\images\select_icon_down.jpg" />
+    <Content Include="Content\en\js\common.js" />
+    <Content Include="Content\en\js\jquery.jscrollpane.min.js" />
+    <Content Include="Content\en\js\jquery.localscroll-1.2.7-min.js" />
+    <Content Include="Content\en\js\jquery.min.js" />
+    <Content Include="Content\en\js\jquery.mousewheel.js" />
+    <Content Include="Content\en\js\jquery.parallax-1.1.3.js" />
+    <Content Include="Content\en\js\jquery.stellar.js" />
+    <Content Include="Content\en\js\owl.carousel.min.js" />
+    <Content Include="Content\en\js\skrollr.js" />
+    <Content Include="Content\en\js\wow.js" />
+    <Content Include="Content\en\js\wow.min.js" />
+    <Content Include="Content\images\btn_downapk.png" />
+    <Content Include="Content\images\btn_more.png" />
+    <Content Include="Content\images\btn_page1buy.png" />
+    <Content Include="Content\images\btn_submit.png" />
+    <Content Include="Content\images\btn_topbuy.png" />
+    <Content Include="Content\images\country\africa\nanfei.jpg" />
+    <Content Include="Content\images\country\asia\aomen.jpg" />
+    <Content Include="Content\images\country\asia\feilvbin.jpg" />
+    <Content Include="Content\images\country\asia\hanguo.jpg" />
+    <Content Include="Content\images\country\asia\hasake.jpg" />
+    <Content Include="Content\images\country\asia\malaixiya.jpg" />
+    <Content Include="Content\images\country\asia\riben.jpg" />
+    <Content Include="Content\images\country\asia\taiguo.jpg" />
+    <Content Include="Content\images\country\asia\taiwan.jpg" />
+    <Content Include="Content\images\country\asia\xianggang.jpg" />
+    <Content Include="Content\images\country\asia\xinjiapo.jpg" />
+    <Content Include="Content\images\country\asia\yinni.jpg" />
+    <Content Include="Content\images\country\europe\aierlan.jpg" />
+    <Content Include="Content\images\country\europe\aodili.jpg" />
+    <Content Include="Content\images\country\europe\aozhou31guo.jpg" />
+    <Content Include="Content\images\country\europe\beiaierlan.jpg" />
+    <Content Include="Content\images\country\europe\bilishi.jpg" />
+    <Content Include="Content\images\country\europe\danmai.jpg" />
+    <Content Include="Content\images\country\europe\deguo.jpg" />
+    <Content Include="Content\images\country\europe\eluosi.jpg" />
+    <Content Include="Content\images\country\europe\faguo.jpg" />
+    <Content Include="Content\images\country\europe\fandigang.jpg" />
+    <Content Include="Content\images\country\europe\helan.jpg" />
+    <Content Include="Content\images\country\europe\jieke.jpg" />
+    <Content Include="Content\images\country\europe\keluodiya.jpg" />
+    <Content Include="Content\images\country\europe\litaowan.jpg" />
+    <Content Include="Content\images\country\europe\luomaniya.jpg" />
+    <Content Include="Content\images\country\europe\lusenbao.jpg" />
+    <Content Include="Content\images\country\europe\nuowei.jpg" />
+    <Content Include="Content\images\country\europe\putaoya.jpg" />
+    <Content Include="Content\images\country\europe\ruidian.jpg" />
+    <Content Include="Content\images\country\europe\shengmaliya.jpg" />
+    <Content Include="Content\images\country\europe\sugelan.jpg" />
+    <Content Include="Content\images\country\europe\tuerqi.jpg" />
+    <Content Include="Content\images\country\europe\xibanya.jpg" />
+    <Content Include="Content\images\country\europe\xila.jpg" />
+    <Content Include="Content\images\country\europe\yidali.jpg" />
+    <Content Include="Content\images\country\europe\yingguo.jpg" />
+    <Content Include="Content\images\country\oceania\aozhou.jpg" />
+    <Content Include="Content\images\country\oceania\xinxilan.jpg" />
+    <Content Include="Content\images\favicon-16x16.ico" />
+    <Content Include="Content\images\favicon-32x32.ico" />
+    <Content Include="Content\images\logo.png" />
+    <Content Include="Content\images\page11_bg.jpg" />
+    <Content Include="Content\images\page1_bg.jpg" />
+    <Content Include="Content\images\page1_slogan.png" />
+    <Content Include="Content\images\page1_title1.png" />
+    <Content Include="Content\images\page1_title2.png" />
+    <Content Include="Content\images\page2_product.png" />
+    <Content Include="Content\images\page2_title.png" />
+    <Content Include="Content\images\page3_2_img1.jpg" />
+    <Content Include="Content\images\page3_2_img1.png" />
+    <Content Include="Content\images\page3_2_img2.jpg" />
+    <Content Include="Content\images\page3_2_img2.png" />
+    <Content Include="Content\images\page3_3_desc.png" />
+    <Content Include="Content\images\page3_3_product.png" />
+    <Content Include="Content\images\page3_bg.jpg" />
+    <Content Include="Content\images\page2_bg.png" />
+    <Content Include="Content\images\page3_bracelet.png" />
+    <Content Include="Content\images\page3_iphone.png" />
+    <Content Include="Content\images\page3_jiahao.png" />
+    <Content Include="Content\images\page3_title.png" />
+    <Content Include="Content\images\page4_2_map.jpg" />
+    <Content Include="Content\images\page4_2_map_light.png" />
+    <Content Include="Content\images\page4_2_title.png" />
+    <Content Include="Content\images\page4_img.jpg" />
+    <Content Include="Content\images\page4_img1.jpg" />
+    <Content Include="Content\images\page4_img2.jpg" />
+    <Content Include="Content\images\page4_img3.jpg" />
+    <Content Include="Content\images\page4_text.png" />
+    <Content Include="Content\images\page5_bg.jpg" />
+    <Content Include="Content\images\page5_text.png" />
+    <Content Include="Content\images\page5_title.png" />
+    <Content Include="Content\images\page6_bg.jpg" />
+    <Content Include="Content\images\page6_free.png" />
+    <Content Include="Content\images\page6_free1.png" />
+    <Content Include="Content\images\page6_free2.png" />
+    <Content Include="Content\images\page6_title.png" />
+    <Content Include="Content\images\page7_bg.jpg" />
+    <Content Include="Content\images\page7_iphone.png" />
+    <Content Include="Content\images\page7_qrcode.jpg" />
+    <Content Include="Content\images\page8_a.jpg" />
+    <Content Include="Content\images\page8_bg.jpg" />
+    <Content Include="Content\images\page8_q.jpg" />
+    <Content Include="Content\images\page8_title.png" />
+    <Content Include="Content\images\page9_bg.jpg" />
+    <Content Include="Content\images\page9_qq.png" />
+    <Content Include="Content\images\page9_title.png" />
+    <Content Include="Content\images\page9_weibo.png" />
+    <Content Include="Content\images\page9_weixin.png" />
+    <Content Include="Content\images\product_1.jpg" />
+    <Content Include="Content\images\product_10.jpg" />
+    <Content Include="Content\images\product_2.jpg" />
+    <Content Include="Content\images\product_3.jpg" />
+    <Content Include="Content\images\product_4.jpg" />
+    <Content Include="Content\images\product_5.jpg" />
+    <Content Include="Content\images\product_6.jpg" />
+    <Content Include="Content\images\product_7.jpg" />
+    <Content Include="Content\images\product_8.jpg" />
+    <Content Include="Content\images\product_9.jpg" />
+    <Content Include="Content\images\product_page.jpg" />
+    <Content Include="Content\images\qqshang.png" />
+    <Content Include="Content\images\select_icon_down.jpg" />
+    <Content Include="Content\images\zc\page1.jpg" />
+    <Content Include="Content\images\zc\page2.jpg" />
+    <Content Include="Content\images\zc\page3.jpg" />
+    <Content Include="Content\images\zc\page4.jpg" />
+    <Content Include="Content\images\zc\page5.jpg" />
+    <Content Include="Content\images\zc\page6.jpg" />
+    <Content Include="Content\images\zc\page7.jpg" />
+    <Content Include="Content\js\common.js" />
+    <Content Include="Content\js\jquery.jscrollpane.min.js" />
+    <Content Include="Content\js\jquery.localscroll-1.2.7-min.js" />
+    <Content Include="Content\js\jquery.min.js" />
+    <Content Include="Content\js\jquery.mousewheel.js" />
+    <Content Include="Content\js\jquery.parallax-1.1.3.js" />
+    <Content Include="Content\js\jquery.stellar.js" />
+    <Content Include="Content\js\owl.carousel.min.js" />
+    <Content Include="Content\js\skrollr.js" />
+    <Content Include="Content\js\wow.js" />
+    <Content Include="Content\js\wow.min.js" />
+    <Content Include="Global.asax" />
+    <Content Include="Web.config" />
+    <Content Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="Views\Web.config" />
+    <Content Include="Views\Shared\Error.cshtml" />
+  </ItemGroup>
+  <ItemGroup />
+  <ItemGroup>
+    <Content Include="packages.config" />
+    <Content Include="Content\css\fonts\HELVETICANEUELTPRO-THEX.OTF" />
+    <Content Include="Content\en\css\fonts\HELVETICANEUELTPRO-THEX.OTF" />
+    <Content Include="Areas\en\Views\web.config" />
+    <Content Include="Areas\en\Views\Shared\_Layout.cshtml" />
+    <Content Include="Areas\en\Views\_ViewStart.cshtml" />
+    <Content Include="Areas\cn\Views\web.config" />
+    <Content Include="Areas\cn\Views\Home\Index.cshtml" />
+    <Content Include="Areas\cn\Views\Shared\_Layout.cshtml" />
+    <Content Include="Areas\cn\Views\_ViewStart.cshtml" />
+    <None Include="Project_Readme.html" />
+    <None Include="Properties\PublishProfiles\ftp.pubxml" />
+    <Content Include="Areas\en\Views\Home\Index.cshtml" />
+    <Content Include="Views\_ViewStart.cshtml" />
+    <Content Include="Views\Shared\_Layout.cshtml" />
+    <Content Include="Views\Wx\BindUser.cshtml" />
+    <Content Include="Views\zhongchou\Index.cshtml" />
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <Target Name="MvcBuildViews" AfterTargets="AfterBuild" Condition="'$(MvcBuildViews)'=='true'">
+    <AspNetCompiler VirtualPath="temp" PhysicalPath="$(WebProjectOutputDir)" />
+  </Target>
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>8144</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:8144/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it.
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target> -->
+</Project>
