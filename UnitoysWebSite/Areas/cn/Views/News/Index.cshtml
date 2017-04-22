@@ -1,27 +1,44 @@
 ﻿@{
     ViewBag.Title = "Index";
 }
+@model List<UnitoysWebSite.Models.UT_News>
 <div class="news_main">
     <div class="mbox">
         <div class="leftbox">
             <div class="p_nav">
                 <ul>
                     <li>
-                        <a href="javascript:;" class="cur">行业新闻</a>
+                        <a href="@Url.Action("Index","News")" class="cur">行业新闻</a>
                     </li>
                     <li>
-                        <a href="news_dt.html">公司动态</a>
+                        <a href="@Url.Action("Index","News")">公司动态</a>
                     </li>
                 </ul>
             </div>
             <div class="top_news">
-                <div class="newsbox">
-                    <p class="pic"><a href="@Url.Action("Detail")"><img src="/Content/images/news_img1.jpg" /></a></p>
-                    <p class="desc">标题标题标题标题标题标题<span>发布于：2017-03-24</span></p>
-                </div>
+                @*<div class="newsbox">
+                        <p class="pic"><a href="@Url.Action("Detail")"><img src="/Content/images/news_img1.jpg" /></a></p>
+                        <p class="desc">标题标题标题标题标题标题<span>发布于：2017-03-24</span></p>
+                    </div>*@
+                @foreach (var item in Model.Where(x => x.IsTop == true))
+                {
+                    <div class="newsbox">
+                        <p class="pic"><a href="@Url.Action("Detail", new { id = item.ID })"><img src="@item.Image" /></a></p>
+                        <p class="desc">@item.Title<span>发布于：@item.NewsDate.ToString("yyyy-MM-dd")</span></p>
+                    </div>
+                }
             </div>
             <div class="news_list">
                 <ul>
+                    @foreach (var item in Model.Where(x => x.IsTop == false))
+                    {
+                        <li>
+                            <div class="newsbox">
+                                <p class="pic"><a href="@Url.Action("Detail", new { id = item.ID })"><img src="@item.Image" /></a></p>
+                                <p class="desc">@item.Title<span>发布于：@item.NewsDate.ToString("yyyy-MM-dd")</span></p>
+                            </div>
+                        </li>
+                    }
                     <li>
                         <div class="newsbox">
                             <p class="pic"><a href="@Url.Action("Detail")"><img src="/Content/images/news_img2.jpg" /></a></p>

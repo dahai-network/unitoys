@@ -1,6 +1,7 @@
 ﻿@{
     ViewBag.Title = "Join";
 }
+@model UnitoysWebSite.Models.UT_GlobalContent
 <div class="company_banner">
     <div class="item"><img src="/Content/images/company_banner.jpg" /></div>
 </div>
@@ -21,7 +22,8 @@
         </div>
         <div class="job_desc">
             <ul>
-                <li>
+                @Html.Raw(Model.Content)
+                @*<li>
                     <h5>高级Android开发工程师</h5>
                     工作地点：深圳<br />
                     职位类别：	研发工程师<br />
@@ -80,9 +82,8 @@
                     6、具有良好的团队合作精神和积极主动的沟通意 <br />
                     申请方式：<br />
                     请发简历到邮箱：marketing@unitoys.com<br />
-                </li>
+                </li>*@
             </ul>
-
         </div>
     </div>
 </div>
