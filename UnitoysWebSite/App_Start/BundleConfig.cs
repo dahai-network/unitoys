@@ -8,8 +8,6 @@ namespace UnitoysWebSite
         // 有关绑定的详细信息，请访问 http://go.microsoft.com/fwlink/?LinkId=301862
         public static void RegisterBundles(BundleCollection bundles)
         {
-
-
             bundles.Add(new ScriptBundle("~/Content/js/get").Include(
                       "~/Content/js/jquery.min.js",
                       "~/Content/js/wow.min.js",
@@ -20,6 +18,10 @@ namespace UnitoysWebSite
                       "~/Content/js/jquery.localscroll-1.2.7-min.js",
                       "~/Content/js/skrollr.js",
                       "~/Content/js/common.js"));
+
+            bundles.Add(new ScriptBundle("~/Content/js/common").Include(
+                     "~/Content/js/jquery.min.js",
+                     "~/Content/js/common.js"));
 
             bundles.Add(new StyleBundle("~/Content/css/get").Include(
                       "~/Content/css/jquery.jscrollpane.css",

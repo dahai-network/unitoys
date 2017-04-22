@@ -5,6 +5,7 @@ using System.Web;
 using System.Web.Mvc;
 using System.Web.Optimization;
 using System.Web.Routing;
+using Unitoys.Ioc;
 
 namespace UnitoysWebSite
 {
@@ -16,6 +17,9 @@ namespace UnitoysWebSite
             FilterConfig.RegisterGlobalFilters(GlobalFilters.Filters);
             RouteConfig.RegisterRoutes(RouteTable.Routes);
             BundleConfig.RegisterBundles(BundleTable.Bundles);
+
+            //为ASP.NET MVC注册IOC容器
+            NinjectRegister.RegisterFovMvc();
         }
     }
 }

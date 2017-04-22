@@ -2,17 +2,99 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
     <meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
-    <title>@ViewBag.Title - 旅行必备神器</title>
+    <title>爱小器 旅行必备神器</title>
     <link href="/Content/images/favicon-32x32.ico" sizes="32x32" rel="icon" type="image/x-icon" />
     <link href="/Content/images/favicon-16x16.ico" sizes="16x16" rel="icon" type="image/x-icon" />
-        @Styles.Render("~/Content/css/get")
+    @Styles.Render("~/Content/css/get")
+    @{
+        var controller = ViewContext.RouteData.Values["controller"].ToString();
+    }
 </head>
 <body>
-
-        @RenderBody()
-    @Scripts.Render("~/Content/js/get")
-    <div style="display:none">
-        <script type="text/javascript">var cnzz_protocol = (("https:" == document.location.protocol) ? " https://" : " http://"); document.write(unescape("%3Cspan id='cnzz_stat_icon_1260647410'%3E%3C/span%3E%3Cscript src='" + cnzz_protocol + "s95.cnzz.com/z_stat.php%3Fid%3D1260647410%26show%3Dpic' type='text/javascript'%3E%3C/script%3E"));</script>
+    <div class="header">
+        <div class="mbox">
+            <div class="logo"><a href="@Url.Action("Index","Home")"><img src="/Content/images/logo.png" /></a></div>
+            <div class="nav">
+                <ul>
+                    <li class="item1"><a href="javascript:;" title="产品">产品</a></li>
+                    <li class="item2"><a href="@Url.Action("Index", "Solution")" title="解决方案" @(controller == "Solution" ? "class=active" : "")>解决方案</a></li>
+                    <li class="item3"><a href="@Url.Action("Index", "News")" title="新闻中心" @(controller == "News" ? "class=active" : "")>新闻中心</a></li>
+                    <li class="item4"><a href="@Url.Action("Index", "About")" title="关于我们" @(controller == "About" ? "class=active" : "")>关于我们</a></li>
+                </ul>
+            </div>
+            <div class="language"><a href="#">English</a></div>
+        </div>
+        <div class="product_second">
+            <div class="mbox">
+                <ul>
+                    <li><a href="#"><img src="/Content/images/menu_product_1.png" />爱小器手环1代</a></li>
+                    <li><a href="javascript:alert('敬请期待！');"><img src="/Content/images/menu_product_2.png" />爱小器手环2代</a></li>
+                    <li><a href="javascript:alert('即将发布，敬请期待！');"><img src="/Content/images/menu_product_3.png" />双待王</a></li>
+                </ul>
+            </div>
+        </div>
     </div>
+
+    @RenderBody()
+
+    <div class="footer">
+        <div class="gnqy mbox">
+            <div class="item1">
+                <ul>
+                    <li><h6>服务与技术：</h6></li>
+                    <li><a href="@Url.Action("Channel", "Service")">售后渠道</a></li>
+                    <li><a href="@Url.Action("Index", "Service")">售后政策</a></li>
+                    <li><a href="#">软件下载</a></li>
+                    <li><a href="@Url.Action("Question", "Service")">常见问题</a></li>
+                </ul>
+            </div>
+            <div class="item2">
+                <ul>
+                    <li><h6>关于我们：</h6></li>
+                    <li><a href="#">企业文化</a></li>
+                    <li><a href="@Url.Action("Index", "About")">企业简介</a></li>
+                    <li><a href="@Url.Action("Business", "About")">商业合作</a></li>
+                    <li><a href="@Url.Action("Join", "About")">加入我们</a></li>
+                </ul>
+            </div>
+            <div class="item3">
+                <ul>
+                    <li><h6>联系我们：</h6></li>
+                    <li>深圳大海网络有限公司</li>
+                    <li>电话：0755-32979727</li>
+                    <li>邮箱：marketing@unitoys.com</li>
+                    <li>地址 :深圳市宝安区宝源路华源科技园B座3区615-618</li>
+                </ul>
+            </div>
+            <div class="item4">
+                <p>
+                    <img src="/Content/images/qrcode_weixin.png" />
+                    关注公众号
+                </p>
+                <p>
+                    <img src="/Content/images/qrcode_appdown.png" />
+                    APP下载
+                </p>
+            </div>
+            <div class="item5">
+                <a href="#" class="btn_android_down"></a>
+                <a href="#" class="btn_ios_down"></a>
+                <a href="#" class="btn_qq"></a>
+            </div>
+        </div>
+        <div class="copyright">
+            Copyright @@ 2016 深圳大海网络有限公司
+            <p class="sharebox">
+                <a href="javascript:;" class="btn_share_weibo"></a>
+                <a href="javascript:;" class="btn_share_tw"></a>
+                <a href="javascript:;" class="btn_share_fb"></a>
+            </p>
+        </div>
+    </div>
+
+    <script type="text/javascript" src="/Content/js/jquery.min.js"></script>
+    <script type="text/javascript" src="/Content/js/common.js"></script>
+    @Scripts.Render("~/Content/js/common");
+    @RenderSection("scripts", false)
 </body>
 </html>
