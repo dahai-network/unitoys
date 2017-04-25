@@ -8,10 +8,10 @@
             <div class="p_nav">
                 <ul>
                     <li>
-                        <a href="@Url.Action("Index","News")" class="cur">行业新闻</a>
+                        <a href="@Url.Action("Index", "News")" @(ViewBag.Type == "industry" ? "" : "class=cur")>公司动态</a>
                     </li>
                     <li>
-                        <a href="@Url.Action("Index","News")">公司动态</a>
+                        <a href="@Url.Action("Index", "News", new { type = "industry" })" @(ViewBag.Type == "industry" ? "class=cur" : "")>行业新闻</a>
                     </li>
                 </ul>
             </div>
@@ -39,54 +39,54 @@
                             </div>
                         </li>
                     }
-                    <li>
-                        <div class="newsbox">
-                            <p class="pic"><a href="@Url.Action("Detail")"><img src="/Content/images/news_img2.jpg" /></a></p>
-                            <p class="desc">标题标题标题标题标题标题<span>发布于：2017-03-24</span></p>
-                        </div>
-                    </li>
-                    <li>
-                        <div class="newsbox">
-                            <p class="pic"><a href="@Url.Action("Detail")"><img src="/Content/images/news_img2.jpg" /></a></p>
-                            <p class="desc">标题标题标题标题标题标题<span>发布于：2017-03-24</span></p>
-                        </div>
-                    </li>
-                    <li>
-                        <div class="newsbox">
-                            <p class="pic"><a href="@Url.Action("Detail")"><img src="/Content/images/news_img2.jpg" /></a></p>
-                            <p class="desc">标题标题标题标题标题标题<span>发布于：2017-03-24</span></p>
-                        </div>
-                    </li>
-                    <li>
-                        <div class="newsbox">
-                            <p class="pic"><a href="@Url.Action("Detail")"><img src="/Content/images/news_img2.jpg" /></a></p>
-                            <p class="desc">标题标题标题标题标题标题<span>发布于：2017-03-24</span></p>
-                        </div>
-                    </li>
-                    <li>
-                        <div class="newsbox">
-                            <p class="pic"><a href="@Url.Action("Detail")"><img src="/Content/images/news_img2.jpg" /></a></p>
-                            <p class="desc">标题标题标题标题标题标题<span>发布于：2017-03-24</span></p>
-                        </div>
-                    </li>
-                    <li>
-                        <div class="newsbox">
-                            <p class="pic"><a href="@Url.Action("Detail")"><img src="/Content/images/news_img2.jpg" /></a></p>
-                            <p class="desc">标题标题标题标题标题标题<span>发布于：2017-03-24</span></p>
-                        </div>
-                    </li>
-                    <li>
-                        <div class="newsbox">
-                            <p class="pic"><a href="@Url.Action("Detail")"><img src="/Content/images/news_img2.jpg" /></a></p>
-                            <p class="desc">标题标题标题标题标题标题<span>发布于：2017-03-24</span></p>
-                        </div>
-                    </li>
-                    <li>
-                        <div class="newsbox">
-                            <p class="pic"><a href="@Url.Action("Detail")"><img src="/Content/images/news_img2.jpg" /></a></p>
-                            <p class="desc">标题标题标题标题标题标题<span>发布于：2017-03-24</span></p>
-                        </div>
-                    </li>
+                    @*<li>
+                            <div class="newsbox">
+                                <p class="pic"><a href="@Url.Action("Detail")"><img src="/Content/images/news_img2.jpg" /></a></p>
+                                <p class="desc">标题标题标题标题标题标题<span>发布于：2017-03-24</span></p>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="newsbox">
+                                <p class="pic"><a href="@Url.Action("Detail")"><img src="/Content/images/news_img2.jpg" /></a></p>
+                                <p class="desc">标题标题标题标题标题标题<span>发布于：2017-03-24</span></p>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="newsbox">
+                                <p class="pic"><a href="@Url.Action("Detail")"><img src="/Content/images/news_img2.jpg" /></a></p>
+                                <p class="desc">标题标题标题标题标题标题<span>发布于：2017-03-24</span></p>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="newsbox">
+                                <p class="pic"><a href="@Url.Action("Detail")"><img src="/Content/images/news_img2.jpg" /></a></p>
+                                <p class="desc">标题标题标题标题标题标题<span>发布于：2017-03-24</span></p>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="newsbox">
+                                <p class="pic"><a href="@Url.Action("Detail")"><img src="/Content/images/news_img2.jpg" /></a></p>
+                                <p class="desc">标题标题标题标题标题标题<span>发布于：2017-03-24</span></p>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="newsbox">
+                                <p class="pic"><a href="@Url.Action("Detail")"><img src="/Content/images/news_img2.jpg" /></a></p>
+                                <p class="desc">标题标题标题标题标题标题<span>发布于：2017-03-24</span></p>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="newsbox">
+                                <p class="pic"><a href="@Url.Action("Detail")"><img src="/Content/images/news_img2.jpg" /></a></p>
+                                <p class="desc">标题标题标题标题标题标题<span>发布于：2017-03-24</span></p>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="newsbox">
+                                <p class="pic"><a href="@Url.Action("Detail")"><img src="/Content/images/news_img2.jpg" /></a></p>
+                                <p class="desc">标题标题标题标题标题标题<span>发布于：2017-03-24</span></p>
+                            </div>
+                        </li>*@
                 </ul>
             </div>
         </div>

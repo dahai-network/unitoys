@@ -27,12 +27,16 @@ namespace UnitoysWebSite.Models
         /// </summary>
         CommonProblem = 3,
         /// <summary>
-        /// 公司相关
+        /// 企业简介
         /// </summary>
         CompanyInfo = 4,
         /// <summary>
         /// 商务合作
         /// </summary>
-        BusinessCooperation = 5
+        BusinessCooperation = 5,
+        /// <summary>
+        /// 企业文化
+        /// </summary>
+        CompanyCulture = 6
     }
 }

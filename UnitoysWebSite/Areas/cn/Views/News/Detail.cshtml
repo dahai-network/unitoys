@@ -8,10 +8,10 @@
             <div class="p_nav">
                 <ul>
                     <li>
-                        <a href="@Url.Action("Index","News")" class="cur">行业新闻</a>
+                        <a href="@Url.Action("Index", "News")" @(Model.NewsType == 1 ? "class=cur" : "")>公司动态</a>
                     </li>
                     <li>
-                        <a href="news_dt.html">公司动态</a>
+                        <a href="@Url.Action("Index", "News", new { type = "industry" })" @(Model.NewsType == 0 ? "class=cur" : "")>行业新闻</a>
                     </li>
                 </ul>
             </div>
@@ -22,6 +22,16 @@
                 </div>
                 <div class="news_content">
                     @Html.Raw(Model.Content)
+                </div>
+                <div class="link">
+                    @if (ViewBag.PrevModel != null)
+                    {
+                        <a href="@Url.Action("Detail", new { id = ViewBag.PrevModel.ID })">上一篇：@ViewBag.PrevModel.Title</a>
+                    }
+                    @if (ViewBag.NextModel != null)
+                    {
+                        <a href="@Url.Action("Detail", new { id = ViewBag.NextModel.ID })">下一篇：@ViewBag.NextModel.Title</a>
+                    }
                 </div>
             </div>
         </div>
