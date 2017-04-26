@@ -277,6 +277,7 @@
     <Content Include="Content\en\js\wow.min.js" />
     <Content Include="Content\images\about_timeline.jpg" />
     <Content Include="Content\images\company_address.jpg" />
+    <Content Include="Content\images\company_address.png" />
     <Content Include="Content\images\company_banner.jpg" />
     <Content Include="Content\images\home_banner_1.jpg" />
     <Content Include="Content\images\logo.png" />

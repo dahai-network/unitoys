@@ -88,7 +88,10 @@ body{background-color:#ffffff;overflow-x:hidden}
 .solution .industry .title_line h3{font-size:28px;font-weight: normal;}
 .solution .industry .title_line p{font-size:14px;color:#999999;}
 .solution .industry .industry_fun{overflow:hidden}
-.solution .industry .industry_fun li{float:left;margin:0 7px 16px 0;}
+.solution .industry .industry_fun li{float:left;margin:0 7px 16px 0;border:solid 1px #eeeeee;box-sizing:border-box;width:393px;}
+.solution .industry .industry_fun li .title{font-size:14px;color:#333333;font-weight:bold;padding:15px 18px 5px;line-height:25px;}
+.solution .industry .industry_fun li .title span{font-size:18px;}
+.solution .industry .industry_fun li .desc{font-size:12px;color:#999999;padding:0 18px 25px;line-height:20px;}
 .solution .partner .title_line{width:100%;height:120px;background-color:#f5f5f5;margin:44px 0;text-align:center;box-sizing:border-box;padding:28px;}
 .solution .partner .title_line h3{font-size:28px;font-weight: normal;}
 .solution .partner .title_line p{font-size:14px;color:#999999;}
@@ -149,7 +152,7 @@ body{background-color:#ffffff;overflow-x:hidden}
 .service_page .content .service_question li .q{color:#088fc3;font-size:16px;height:35px;}
 .service_page .content .service_question li .a{color:#999999;font-size:14px;height:28px;}
 /** 新闻中心 **/
-.news_main{background-color:#ffffff;overflow:hidden;border-bottom:solid 1px #f5f5f5}
+.news_main{background-color:#ffffff;overflow:hidden;border-bottom:solid 1px #f5f5f5;padding-bottom: 12px;}
 .news_main .leftbox{box-sizing:border-box;width:840px;float:left;}
 .news_main .leftbox .p_nav{border-bottom:solid 1px #f5f5f5;overflow:hidden;width:100%;height:32px;margin-top:38px;}
 .news_main .leftbox .p_nav li{width:66px;float:left;margin-right:35px;}
