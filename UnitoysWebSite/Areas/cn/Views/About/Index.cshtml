@@ -31,10 +31,10 @@
             @Html.Raw(Model.FirstOrDefault(x => x.GlobalContentType == (int)UnitoysWebSite.Models.GlobalContentType.CompanyCulture).Content)
         </div>
         <div id="tabContent-Business" class="about_desc tab-content @(ViewBag.Type == "Business" ? "tab-content-show" : "")">
-            @Html.Raw(Model.FirstOrDefault(x => x.GlobalContentType == (int)UnitoysWebSite.Models.GlobalContentType.Recruitment).Content)
+            @Html.Raw(Model.FirstOrDefault(x => x.GlobalContentType == (int)UnitoysWebSite.Models.GlobalContentType.BusinessCooperation).Content)
         </div>
         <div id="tabContent-Join" class="about_desc tab-content @(ViewBag.Type == "Join" ? "tab-content-show" : "")">
-            @Html.Raw(Model.FirstOrDefault(x => x.GlobalContentType == (int)UnitoysWebSite.Models.GlobalContentType.BusinessCooperation).Content)
+            @Html.Raw(Model.FirstOrDefault(x => x.GlobalContentType == (int)UnitoysWebSite.Models.GlobalContentType.Recruitment).Content)
         </div>
     </div>
 </div>
