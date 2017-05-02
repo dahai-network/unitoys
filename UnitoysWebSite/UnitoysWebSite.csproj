@@ -289,6 +289,7 @@
     <Content Include="Content\images\qrcode_appdown.png" />
     <Content Include="Content\images\qrcode_weixin.png" />
     <Content Include="Content\images\service_banner.jpg" />
+    <Content Include="Content\images\service_banner.png" />
     <Content Include="Content\images\shouhuan1\btn_downapk.png" />
     <Content Include="Content\images\shouhuan1\btn_more.png" />
     <Content Include="Content\images\shouhuan1\btn_page1buy.png" />
@@ -436,6 +437,8 @@
     <Content Include="App_Data\site.config" />
     <Content Include="Areas\cn\Views\Product\Shouhuan1.cshtml" />
     <Content Include="Areas\cn\Views\About\Culture.cshtml" />
+    <Content Include="Areas\cn\Views\Service\Index - 复制.cshtml" />
+    <Content Include="Areas\cn\Views\About\Index - 复制.cshtml" />
     <None Include="Project_Readme.html" />
     <None Include="Properties\PublishProfiles\ftp.pubxml" />
     <Content Include="Areas\en\Views\Home\Index.cshtml" />
