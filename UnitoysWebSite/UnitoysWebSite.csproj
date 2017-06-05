@@ -139,6 +139,7 @@
     <Compile Include="Areas\cn\Controllers\SolutionController.cs" />
     <Compile Include="Areas\en\Controllers\HomeController.cs" />
     <Compile Include="Areas\en\enAreaRegistration.cs" />
+    <Compile Include="Controllers\downController.cs" />
     <Compile Include="Controllers\downappController.cs" />
     <Compile Include="Controllers\IndexController.cs" />
     <Compile Include="Controllers\WxController.cs" />
