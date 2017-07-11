@@ -9,6 +9,23 @@
     @{
         var controller = ViewContext.RouteData.Values["controller"].ToString();
     }
+    <style>
+        .field-validation-error {
+            color: #b94a48;
+        }
+        .tab-content {
+            display: none;
+        }
+        .tab-content-show {
+            display: block;
+        }
+        .about_main .content .p_nav li a {
+            cursor: pointer;
+        }
+        .service_page .content .p_nav li a {
+            cursor: pointer;
+        }
+    </style>
 </head>
 <body>
     <div class="header">
@@ -36,7 +53,7 @@
     </div>
 
     @RenderBody()
-
+    
     <div class="footer">
         <div class="gnqy mbox">
             <div class="item1">
@@ -76,11 +93,6 @@
                     APP下载
                 </p>
             </div>
-            <div class="item5">
-                <a href="@Url.Action("Index", "downapp", new { area = "" })" target="_blank" class="btn_android_down"></a>
-                <a href="@Url.Action("Index", "downapp", new { area = "" })" target="_blank" class="btn_ios_down"></a>
-                <a target="_blank" href="http://wpa.qq.com/msgrd?v=3&uin=3080157017&site=qq&menu=yes" class="btn_qq"></a>
-            </div>
         </div>
         <div class="copyright">
             Copyright @@ 2016 深圳大海网络有限公司
@@ -92,8 +104,6 @@
         </div>
     </div>
 
-    <script type="text/javascript" src="/Content/js/jquery.min.js"></script>
-    <script type="text/javascript" src="/Content/js/common.js"></script>
     @Scripts.Render("~/Content/js/common")
     @RenderSection("scripts", false)
 </body>

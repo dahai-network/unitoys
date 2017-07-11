@@ -6,35 +6,120 @@
     <div class="item"><img src="/Content/images/company_banner.jpg" /></div>
 </div>
 <div class="about_main">
-    <div class="mbox content">
-        <div class="p_nav">
-            <ul>
-                <li>
-                    <a data-tab="#tabContent-Index" @(ViewBag.Type == "Index" ? "class=cur" : "")>企业简介</a>
-                </li>
-                <li>
-                    <a data-tab="#tabContent-Culture" @(ViewBag.Type == "Culture" ? "class=cur" : "")>企业文化</a>
-                </li>
-                <li>
-                    <a data-tab="#tabContent-Business" @(ViewBag.Type == "Business" ? "class=cur" : "")>商务合作</a>
-                </li>
-                <li>
-                    <a data-tab="#tabContent-Join" @(ViewBag.Type == "Join" ? "class=cur" : "")>加入我们</a>
-                </li>
-            </ul>
-        </div>
+    <div class="business">
+        <div class="mbox content">
+            <div class="p_nav">
+                <ul>
+                    <li>
+                        <a data-tab="#tabContent-Index" @(ViewBag.Type == "Index" ? "class=cur" : "")>企业简介</a>
+                    </li>
+                    <li>
+                        <a data-tab="#tabContent-Culture" @(ViewBag.Type == "Culture" ? "class=cur" : "")>企业文化</a>
+                    </li>
+                    <li>
+                        <a data-tab="#tabContent-Business" @(ViewBag.Type == "Business" ? "class=cur" : "")>商务合作</a>
+                    </li>
+                    <li>
+                        <a data-tab="#tabContent-Join" @(ViewBag.Type == "Join" ? "class=cur" : "")>加入我们</a>
+                    </li>
+                </ul>
+            </div>
 
-        <div id="tabContent-Index" class="about_desc tab-content @(ViewBag.Type == "Index" ? "tab-content-show" : "")">
-            @Html.Raw(Model.FirstOrDefault(x => x.GlobalContentType == (int)UnitoysWebSite.Models.GlobalContentType.CompanyInfo).Content)
-        </div>
-        <div id="tabContent-Culture" class="about_desc tab-content  @(ViewBag.Type == "Culture" ? "tab-content-show" : "")">
-            @Html.Raw(Model.FirstOrDefault(x => x.GlobalContentType == (int)UnitoysWebSite.Models.GlobalContentType.CompanyCulture).Content)
-        </div>
-        <div id="tabContent-Business" class="about_desc tab-content @(ViewBag.Type == "Business" ? "tab-content-show" : "")">
-            @Html.Raw(Model.FirstOrDefault(x => x.GlobalContentType == (int)UnitoysWebSite.Models.GlobalContentType.BusinessCooperation).Content)
-        </div>
-        <div id="tabContent-Join" class="about_desc tab-content @(ViewBag.Type == "Join" ? "tab-content-show" : "")">
-            @Html.Raw(Model.FirstOrDefault(x => x.GlobalContentType == (int)UnitoysWebSite.Models.GlobalContentType.Recruitment).Content)
+            <div id="tabContent-Index" data-banner="/Content/images/company_banner.jpg" class="about_desc tab-content @(ViewBag.Type == "Index" ? "tab-content-show" : "")">
+                @Html.Raw(Model.FirstOrDefault(x => x.GlobalContentType == (int)UnitoysWebSite.Models.GlobalContentType.CompanyInfo).Content)
+            </div>
+            <div id="tabContent-Culture" data-banner="/Content/images/company_banner.jpg" class="about_desc tab-content  @(ViewBag.Type == "Culture" ? "tab-content-show" : "")">
+                @Html.Raw(Model.FirstOrDefault(x => x.GlobalContentType == (int)UnitoysWebSite.Models.GlobalContentType.CompanyCulture).Content)
+            </div>
+            <div id="tabContent-Business" data-banner="/Content/images/banner_business.jpg" class="about_desc tab-content @(ViewBag.Type == "Business" ? "tab-content-show" : "")" style="margin-top: 0px;">
+                <div class="address_pic"><img src="/Content/images/company_address.png" /></div>
+                <div class="ctbox">
+                    <div class="col_two_third">
+                        <h3 class="t300">联系我们</h3>
+                        <div class="contact-widget">
+                            <div class="contact-form-result"></div>
+                            <form class="nobottommargin" id="template-contactform" name="template-contactform" action="/index.php?s=/expand/contact/lianxi.html" method="post">
+                                <div class="form-process"></div>
+                                <div class="col_half">
+                                    <input type="text" id="template-contactform-name" name="name" value="" class="sm-form-control border-form-control required" placeholder="姓名" />
+                                </div>
+                                <div class="col_half col_last">
+                                    <input type="email" id="template-contactform-email" name="email" value="" class="required email sm-form-control border-form-control" placeholder="邮箱" />
+                                </div>
+                                <div class="clear"></div>
+                                <div class="col_full">
+                                    <input type="text" id="template-contactform-subject" name="subject" value="" class="required sm-form-control border-form-control" placeholder="联系电话" />
+                                </div>
+                                <div class="col_full">
+                                    <textarea class="required sm-form-control border-form-control" id="message" name="message" rows="3" cols="30" placeholder="信息"></textarea>
+                                </div>
+                                <div class="col_full">
+                                    <button class="button t300 noleftmargin" type="button" id="template-contactus-submit" value="submit">
+                                        发送信息
+                                    </button>
+                                </div>
+                                <div class="clear"></div>
+                            </form>
+                        </div>
+                    </div>
+                    <div class="contact_desc">
+                        @Html.Raw(Model.FirstOrDefault(x => x.GlobalContentType == (int)UnitoysWebSite.Models.GlobalContentType.BusinessCooperation).Content)
+                        @*<p>
+                                公司名称：深圳市大海网络有限公司<br />
+                                公司地址：深圳市宝安区宝源路华源科技园B座3区615-618
+                            </p>
+
+                            <p>
+                                <br />
+                                市场与渠道合作：陈先生
+                            </p>
+
+                            <p>联系邮箱：yanzhen.chen@unitoys.com</p>
+
+                            <p>
+                                <br />
+                                商务与媒体合作：郭小姐
+                            </p>
+
+                            <p>联系邮箱：guolin@unitoys.com&nbsp;</p><br /><br /><br />*@
+                        <div class="col_full">
+                            <button class="button t300 noleftmargin" type="submit" id="template-apply_agent-submit" value="submit">
+                                申请代理商
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="tabContent-Join" data-banner="/Content/images/banner_join.jpg" class="about_desc tab-content @(ViewBag.Type == "Join" ? "tab-content-show" : "")">
+                @Html.Raw(Model.FirstOrDefault(x => x.GlobalContentType == (int)UnitoysWebSite.Models.GlobalContentType.Recruitment).Content)
+            </div>
         </div>
     </div>
 </div>
+@section scripts{
+    <style>
+        .about_main .content .about_desc p {
+            font-size: inherit;
+            line-height: inherit;
+        }
+    </style>
+
+    <script type="text/javascript">
+        $('#template-apply_agent-submit').click(function () {
+            location.href = "@Url.Action("ApplyAgent")";
+        })
+        $('#template-contactus-submit').click(function () {
+            $.post('@Url.Action("ContactUs", "About")', $('#template-contactform').serialize(), function (data) {
+                if (data.success) {
+                    alert(data.Msg);
+                } else {
+                    alert(data.Msg);
+                }
+            })
+        })
+        $('.about_desc.tab-content').on('tab.content.show', function () {
+            $('.company_banner>.item>img').attr('src', $(this).data('banner'));
+        })
+    </script>
+
+}

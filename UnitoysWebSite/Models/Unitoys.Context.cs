@@ -27,5 +27,7 @@ namespace UnitoysWebSite.Models
     
         public virtual DbSet<UT_GlobalContent> UT_GlobalContent { get; set; }
         public virtual DbSet<UT_News> UT_News { get; set; }
+        public virtual DbSet<UT_Agent> UT_Agent { get; set; }
+        public virtual DbSet<UT_ContactUS> UT_ContactUS { get; set; }
     }
 }

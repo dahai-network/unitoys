@@ -7,6 +7,8 @@
       <Diagram DiagramId="8db4205d6c8144209db3e06e4c52229b" Name="Diagram1">
         <EntityTypeShape EntityType="UnitoysModel.UT_GlobalContent" Width="1.5" PointX="0.75" PointY="0.75" IsExpanded="true" />
         <EntityTypeShape EntityType="UnitoysModel.UT_News" Width="1.5" PointX="2.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="UnitoysModel.UT_Agent" Width="1.5" PointX="0.75" PointY="4.75" />
+        <EntityTypeShape EntityType="UnitoysModel.UT_ContactUS" Width="1.5" PointX="3.375" PointY="4.75" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>

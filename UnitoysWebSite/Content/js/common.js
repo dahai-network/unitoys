@@ -15,11 +15,12 @@ $(function () {
     })
 
     $(".service_page .p_nav>ul>li>a,.about_main .p_nav>ul>li>a").click(function () {
-        //alert($(this).data("tab"));
         $(".p_nav>ul>li>a").removeClass('cur');
         $('.tab-content').removeClass('tab-content-show');
         $(this).addClass('cur');
+        $($(this).data("tab")).trigger('tab.content.show');
         $($(this).data("tab")).addClass('tab-content-show');
+        
     });
     
 })

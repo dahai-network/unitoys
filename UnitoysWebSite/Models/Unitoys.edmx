@@ -5,6 +5,53 @@
     <!-- SSDL content -->
     <edmx:StorageModels>
     <Schema Namespace="UnitoysModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2008" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="UT_Agent">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="uniqueidentifier" Nullable="false" />
+          <Property Name="CompanyName" Type="nvarchar(max)" />
+          <Property Name="Area" Type="nvarchar(max)" />
+          <Property Name="RegisteredAddress" Type="nvarchar(max)" />
+          <Property Name="CorporateRepresentative" Type="nvarchar(max)" />
+          <Property Name="CompanyRegistrationTime" Type="datetime" Nullable="false" />
+          <Property Name="CorporationNature" Type="int" Nullable="false" />
+          <Property Name="MarketPersonnelNum" Type="int" Nullable="false" />
+          <Property Name="SalerPersonnelNum" Type="int" Nullable="false" />
+          <Property Name="AfterSalesPersonalNum" Type="int" Nullable="false" />
+          <Property Name="ScopeBusiness" Type="nvarchar(max)" />
+          <Property Name="SalesArea" Type="nvarchar(max)" />
+          <Property Name="AnnualSales" Type="nvarchar(max)" />
+          <Property Name="MainBusiness" Type="nvarchar(max)" />
+          <Property Name="MainClientCategory" Type="nvarchar(max)" />
+          <Property Name="Contact" Type="nvarchar(max)" />
+          <Property Name="ContactMobilePhone" Type="nvarchar(max)" />
+          <Property Name="EMail" Type="nvarchar(max)" />
+          <Property Name="QQWeChat" Type="nvarchar(max)" />
+          <Property Name="Tel" Type="nvarchar(max)" />
+          <Property Name="FAX" Type="nvarchar(max)" />
+          <Property Name="CompanyWebSite" Type="nvarchar(max)" />
+          <Property Name="IsAgentOtherProducts" Type="bit" Nullable="false" />
+          <Property Name="OtherProducts" Type="nvarchar(max)" />
+          <Property Name="DevelopMarketAssumptions" Type="nvarchar(max)" />
+          <Property Name="CompanyChannelsResources" Type="nvarchar(max)" />
+          <Property Name="CooperationSuggestion" Type="nvarchar(max)" />
+          <Property Name="Status" Type="int" Nullable="false" />
+          <Property Name="CreateDate" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="UT_ContactUS">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="uniqueidentifier" Nullable="false" />
+          <Property Name="Name" Type="nvarchar(max)" />
+          <Property Name="MailAddress" Type="nvarchar(max)" />
+          <Property Name="Subject" Type="nvarchar(max)" />
+          <Property Name="Content" Type="nvarchar(max)" />
+          <Property Name="CreateDate" Type="int" Nullable="false" />
+          <Property Name="Status" Type="int" Nullable="false" />
+          <Property Name="Remark" Type="nvarchar(max)" />
+        </EntityType>
         <EntityType Name="UT_GlobalContent">
           <Key>
             <PropertyRef Name="ID" />
@@ -30,6 +77,8 @@
           <Property Name="IsTop" Type="bit" Nullable="false" />
         </EntityType>
         <EntityContainer Name="UnitoysModelStoreContainer">
+          <EntitySet Name="UT_Agent" EntityType="Self.UT_Agent" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="UT_ContactUS" EntityType="Self.UT_ContactUS" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="UT_GlobalContent" EntityType="Self.UT_GlobalContent" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="UT_News" EntityType="Self.UT_News" Schema="dbo" store:Type="Tables" />
         </EntityContainer>
@@ -64,7 +113,56 @@
         <EntityContainer Name="UnitoysEntities" annotation:LazyLoadingEnabled="true">
           <EntitySet Name="UT_GlobalContent" EntityType="Self.UT_GlobalContent" />
           <EntitySet Name="UT_News" EntityType="Self.UT_News" />
+          <EntitySet Name="UT_Agent" EntityType="UnitoysModel.UT_Agent" />
+          <EntitySet Name="UT_ContactUS" EntityType="UnitoysModel.UT_ContactUS" />
         </EntityContainer>
+        <EntityType Name="UT_Agent">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Guid" Nullable="false" />
+          <Property Name="CompanyName" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Area" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="RegisteredAddress" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="CorporateRepresentative" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="CompanyRegistrationTime" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="CorporationNature" Type="Int32" Nullable="false" />
+          <Property Name="MarketPersonnelNum" Type="Int32" Nullable="false" />
+          <Property Name="SalerPersonnelNum" Type="Int32" Nullable="false" />
+          <Property Name="AfterSalesPersonalNum" Type="Int32" Nullable="false" />
+          <Property Name="ScopeBusiness" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="SalesArea" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="AnnualSales" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="MainBusiness" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="MainClientCategory" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Contact" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="ContactMobilePhone" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="EMail" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="QQWeChat" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Tel" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="FAX" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="CompanyWebSite" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="IsAgentOtherProducts" Type="Boolean" Nullable="false" />
+          <Property Name="OtherProducts" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="DevelopMarketAssumptions" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="CompanyChannelsResources" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="CooperationSuggestion" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Status" Type="Int32" Nullable="false" />
+          <Property Name="CreateDate" Type="Int32" Nullable="false" />
+        </EntityType>
+        <EntityType Name="UT_ContactUS">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Guid" Nullable="false" />
+          <Property Name="Name" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="MailAddress" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Subject" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Content" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="CreateDate" Type="Int32" Nullable="false" />
+          <Property Name="Status" Type="Int32" Nullable="false" />
+          <Property Name="Remark" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+        </EntityType>
       </Schema>
     </edmx:ConceptualModels>
     <!-- C-S mapping content -->
@@ -94,6 +192,55 @@
                 <ScalarProperty Name="NewsType" ColumnName="NewsType" />
                 <ScalarProperty Name="CreateDate" ColumnName="CreateDate" />
                 <ScalarProperty Name="IsTop" ColumnName="IsTop" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="UT_Agent">
+            <EntityTypeMapping TypeName="UnitoysModel.UT_Agent">
+              <MappingFragment StoreEntitySet="UT_Agent">
+                <ScalarProperty Name="CreateDate" ColumnName="CreateDate" />
+                <ScalarProperty Name="Status" ColumnName="Status" />
+                <ScalarProperty Name="CooperationSuggestion" ColumnName="CooperationSuggestion" />
+                <ScalarProperty Name="CompanyChannelsResources" ColumnName="CompanyChannelsResources" />
+                <ScalarProperty Name="DevelopMarketAssumptions" ColumnName="DevelopMarketAssumptions" />
+                <ScalarProperty Name="OtherProducts" ColumnName="OtherProducts" />
+                <ScalarProperty Name="IsAgentOtherProducts" ColumnName="IsAgentOtherProducts" />
+                <ScalarProperty Name="CompanyWebSite" ColumnName="CompanyWebSite" />
+                <ScalarProperty Name="FAX" ColumnName="FAX" />
+                <ScalarProperty Name="Tel" ColumnName="Tel" />
+                <ScalarProperty Name="QQWeChat" ColumnName="QQWeChat" />
+                <ScalarProperty Name="EMail" ColumnName="EMail" />
+                <ScalarProperty Name="ContactMobilePhone" ColumnName="ContactMobilePhone" />
+                <ScalarProperty Name="Contact" ColumnName="Contact" />
+                <ScalarProperty Name="MainClientCategory" ColumnName="MainClientCategory" />
+                <ScalarProperty Name="MainBusiness" ColumnName="MainBusiness" />
+                <ScalarProperty Name="AnnualSales" ColumnName="AnnualSales" />
+                <ScalarProperty Name="SalesArea" ColumnName="SalesArea" />
+                <ScalarProperty Name="ScopeBusiness" ColumnName="ScopeBusiness" />
+                <ScalarProperty Name="AfterSalesPersonalNum" ColumnName="AfterSalesPersonalNum" />
+                <ScalarProperty Name="SalerPersonnelNum" ColumnName="SalerPersonnelNum" />
+                <ScalarProperty Name="MarketPersonnelNum" ColumnName="MarketPersonnelNum" />
+                <ScalarProperty Name="CorporationNature" ColumnName="CorporationNature" />
+                <ScalarProperty Name="CompanyRegistrationTime" ColumnName="CompanyRegistrationTime" />
+                <ScalarProperty Name="CorporateRepresentative" ColumnName="CorporateRepresentative" />
+                <ScalarProperty Name="RegisteredAddress" ColumnName="RegisteredAddress" />
+                <ScalarProperty Name="Area" ColumnName="Area" />
+                <ScalarProperty Name="CompanyName" ColumnName="CompanyName" />
+                <ScalarProperty Name="ID" ColumnName="ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="UT_ContactUS">
+            <EntityTypeMapping TypeName="UnitoysModel.UT_ContactUS">
+              <MappingFragment StoreEntitySet="UT_ContactUS">
+                <ScalarProperty Name="Remark" ColumnName="Remark" />
+                <ScalarProperty Name="Status" ColumnName="Status" />
+                <ScalarProperty Name="CreateDate" ColumnName="CreateDate" />
+                <ScalarProperty Name="Content" ColumnName="Content" />
+                <ScalarProperty Name="Subject" ColumnName="Subject" />
+                <ScalarProperty Name="MailAddress" ColumnName="MailAddress" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="ID" ColumnName="ID" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>

@@ -150,6 +150,7 @@
     </Compile>
     <Compile Include="Models\GlobalContentService.cs" />
     <Compile Include="Models\GlobalContentType.cs" />
+    <Compile Include="Models\JsonAjaxResult.cs" />
     <Compile Include="Models\Unitoys.Context.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -164,6 +165,12 @@
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>Unitoys.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="Models\UT_Agent.cs">
+      <DependentUpon>Unitoys.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\UT_ContactUS.cs">
+      <DependentUpon>Unitoys.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\UT_GlobalContent.cs">
       <DependentUpon>Unitoys.tt</DependentUpon>
@@ -277,6 +284,10 @@
     <Content Include="Content\en\js\wow.js" />
     <Content Include="Content\en\js\wow.min.js" />
     <Content Include="Content\images\about_timeline.jpg" />
+    <Content Include="Content\images\banner_business.jpg" />
+    <Content Include="Content\images\banner_join.jpg" />
+    <Content Include="Content\images\btn_sqwx.jpg" />
+    <Content Include="Content\images\btn_wxcx.jpg" />
     <Content Include="Content\images\company_address.jpg" />
     <Content Include="Content\images\company_address.png" />
     <Content Include="Content\images\company_banner.jpg" />
@@ -289,6 +300,7 @@
     <Content Include="Content\images\news_img2.jpg" />
     <Content Include="Content\images\qrcode_appdown.png" />
     <Content Include="Content\images\qrcode_weixin.png" />
+    <Content Include="Content\images\selebom.png" />
     <Content Include="Content\images\service_banner.jpg" />
     <Content Include="Content\images\service_banner.png" />
     <Content Include="Content\images\shouhuan1\btn_downapk.png" />
@@ -371,6 +383,7 @@
     <Content Include="Content\images\solution_industry6.jpg" />
     <Content Include="Content\images\solution_partner.jpg" />
     <Content Include="Content\images\sprite_img.png" />
+    <Content Include="Content\js\classie.js" />
     <Content Include="Content\js\common.js" />
     <Content Include="Content\js\jquery.jscrollpane.min.js" />
     <Content Include="Content\js\jquery.localscroll-1.2.7-min.js" />
@@ -378,7 +391,10 @@
     <Content Include="Content\js\jquery.mousewheel.js" />
     <Content Include="Content\js\jquery.parallax-1.1.3.js" />
     <Content Include="Content\js\jquery.stellar.js" />
+    <Content Include="Content\js\jquery.validate.min.js" />
+    <Content Include="Content\js\jquery.validate.unobtrusive.min.js" />
     <Content Include="Content\js\owl.carousel.min.js" />
+    <Content Include="Content\js\selectFx.js" />
     <Content Include="Content\js\skrollr.js" />
     <Content Include="Content\js\wow.js" />
     <Content Include="Content\js\wow.min.js" />
@@ -440,6 +456,7 @@
     <Content Include="Areas\cn\Views\About\Culture.cshtml" />
     <Content Include="Areas\cn\Views\Service\Index - 复制.cshtml" />
     <Content Include="Areas\cn\Views\About\Index - 复制.cshtml" />
+    <Content Include="Areas\cn\Views\About\ApplyAgent.cshtml" />
     <None Include="Project_Readme.html" />
     <None Include="Properties\PublishProfiles\ftp.pubxml" />
     <Content Include="Areas\en\Views\Home\Index.cshtml" />
