@@ -287,6 +287,7 @@
     <Content Include="Content\images\banner_business.jpg" />
     <Content Include="Content\images\banner_join.jpg" />
     <Content Include="Content\images\btn_sqwx.jpg" />
+    <Content Include="Content\images\btn_unibox_buy.png" />
     <Content Include="Content\images\btn_wxcx.jpg" />
     <Content Include="Content\images\company_address.jpg" />
     <Content Include="Content\images\company_address.png" />
@@ -383,6 +384,21 @@
     <Content Include="Content\images\solution_industry6.jpg" />
     <Content Include="Content\images\solution_partner.jpg" />
     <Content Include="Content\images\sprite_img.png" />
+    <Content Include="Content\images\unibox_page1_icon.png" />
+    <Content Include="Content\images\unibox_page1_img.png" />
+    <Content Include="Content\images\unibox_page2_left.jpg" />
+    <Content Include="Content\images\unibox_page3_img.jpg" />
+    <Content Include="Content\images\unibox_page4_bg.jpg" />
+    <Content Include="Content\images\unibox_page5_bg_left.jpg" />
+    <Content Include="Content\images\unibox_page5_bg_right.jpg" />
+    <Content Include="Content\images\unibox_page5_left.png" />
+    <Content Include="Content\images\unibox_page5_right.png" />
+    <Content Include="Content\images\unibox_page6_img.png" />
+    <Content Include="Content\images\unibox_page7_bg.jpg" />
+    <Content Include="Content\images\unibox_page8_img.png" />
+    <Content Include="Content\images\unibox_page9_a.png" />
+    <Content Include="Content\images\unibox_page9_bg.jpg" />
+    <Content Include="Content\images\unibox_page9_q.png" />
     <Content Include="Content\js\classie.js" />
     <Content Include="Content\js\common.js" />
     <Content Include="Content\js\jquery.jscrollpane.min.js" />
@@ -457,6 +473,7 @@
     <Content Include="Areas\cn\Views\Service\Index - 复制.cshtml" />
     <Content Include="Areas\cn\Views\About\Index - 复制.cshtml" />
     <Content Include="Areas\cn\Views\About\ApplyAgent.cshtml" />
+    <Content Include="Areas\cn\Views\Product\Unibox.cshtml" />
     <None Include="Project_Readme.html" />
     <None Include="Properties\PublishProfiles\ftp.pubxml" />
     <Content Include="Areas\en\Views\Home\Index.cshtml" />

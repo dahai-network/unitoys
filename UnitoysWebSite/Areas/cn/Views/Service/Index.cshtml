@@ -3,7 +3,7 @@
 }
 @model List<UnitoysWebSite.Models.UT_GlobalContent>
 <div class="service_banner">
-    <div class="item"><img src="/Content/images/service_banner.png" /></div>
+    <div class="item"><img src="/Content/images/service_banner.jpg" /></div>
 </div>
 <div class="service_page">
     <div class="mbox content">
@@ -27,8 +27,11 @@
         <div id="tabContent-Index" class="service_desc tab-content  @(ViewBag.Type == "Index" ? "tab-content-show" : "")">
             @Html.Raw(Model.FirstOrDefault(x => x.GlobalContentType == (int)UnitoysWebSite.Models.GlobalContentType.AfterSalesPolicy).Content)
         </div>
-        <div id="tabContent-Question" class="service_desc tab-content @(ViewBag.Type == "Question" ? "tab-content-show" : "")">
-            @Html.Raw(Model.FirstOrDefault(x => x.GlobalContentType == (int)UnitoysWebSite.Models.GlobalContentType.CommonProblem).Content)
+        <div id="tabContent-Question" class="tab-content @(ViewBag.Type == "Question" ? "tab-content-show" : "")">
+            <div class="service_question">
+
+                @Html.Raw(Model.FirstOrDefault(x => x.GlobalContentType == (int)UnitoysWebSite.Models.GlobalContentType.CommonProblem).Content)
+            </div>
         </div>
     </div>
 </div>
