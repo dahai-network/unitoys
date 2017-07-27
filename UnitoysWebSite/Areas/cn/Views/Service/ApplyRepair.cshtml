@@ -1,0 +1,115 @@
+﻿@{
+    ViewBag.Title = "ApplyRepair";
+}
+<style>
+    .btn_upimg input[type='file'] {
+        opacity: 0;
+        width: 100%;
+        height: 100%;
+    }
+</style>
+<div class="apply_repair_main">
+    <div class="mbox content">
+        <h3>申请维修</h3>
+        <div class="repair_step">
+            <p class="hx"></p>
+            <span class="cur"><b></b>提交申请</span>
+            <span><b></b>审核</span>
+            <span><b></b>邮寄</span>
+            <span><b></b>处理</span>
+            <span><b></b>完成</span>
+        </div>
+        <form class="formbox">
+            <div class="item">
+                <p class="col_1">
+                    <span class="sp1">产品型号*</span><select name="ProductModel" style="width: 400px;" class="slt_address ipt_col1">
+                        <option value="1" selected="selected">双待王</option>
+                        <option value="0">手环</option>
+                    </select>@*<input type="text" class="ipt_col1" />*@
+                </p>
+            </div>
+            <div class="item"><p class="col_1"><span class="sp1">联系人*</span><input name="Contact" type="text" class="ipt_col1" /></p></div>
+            <div class="item"><p class="col_1"><span class="sp1">手机号码*</span><input name="MobilePhone" type="text" class="ipt_col1" /></p></div>
+            <div class="item"><p class="col_1"><span class="sp1">联系地址*</span><input name="Address" type="text" class="ipt_col1" /></p></div>
+            <div class="item"><p class="col_1"><span class="sp1">购买时间</span><input name="BuyDate" type="date" class="ipt_col1" /></p></div>
+            @*<div class="item"><p class="col_1"><span class="sp1">注册地址*</span><input type="text" class="ipt_col1" /></p></div>*@
+            <div class="item"><p class="col_1"><span class="sp1">故障描述*</span><textarea name="ProblemDescr"></textarea></p></div>
+            <div class="item">
+                <div class="col_1">
+                    <span class="sp1">故障图片*</span><p>
+                        <a href="javascript:;" class="btn_upimg">
+                            <input name="Pic" type="file" class="hidden" accept="image/jpg,image/jpeg,image/png,image/gif" value="" />
+                        </a>
+                        <a href="javascript:;" class="btn_upimg">
+                            <input name="Pic" type="file" class="hidden" accept="image/jpg,image/jpeg,image/png,image/gif" value="" />
+                        </a>
+                        <a href="javascript:;" class="btn_upimg">
+                            <input name="Pic" type="file" class="hidden" accept="image/jpg,image/jpeg,image/png,image/gif" value="" />
+                        </a>
+                        @*<a href="javascript:;" class="btn_upimg"></a>
+                            <a href="javascript:;" class="btn_upimg"></a>*@
+                    </p>
+                </div>
+            </div>
+
+            <div class="bottom_btn"><a href="javascript:;" class="btn_submit_apply">提交</a></div>
+        </form>
+    </div>
+</div>
+@section scripts{
+    <script type="text/javascript">
+        $(":file").change(function () {
+            var appendImg = $(this).parent();
+            var reader = new FileReader();
+            reader.readAsDataURL(this.files[0]);
+            reader.onload = function (e) {
+                //var str = "<img src='" + e.target.result + "'/>";
+                //appendImg.append(str);
+                //appendImg.css('background-image', e.target.result);
+                appendImg.css("background-image", "url(" + e.target.result + ")");
+                appendImg.css("background-size", "cover");
+            }
+        })
+
+        $('.btn_submit_apply').click(function () {
+            var formData = new FormData($('.formbox')[0]);
+            $.ajax({
+                type: 'post',
+                //url: '../../../material/jQueryFileUpload?type=1',
+                data: formData,
+                contentType: false,// 当有文件要上传时，此项是必须的，否则后台无法识别文件流的起始位置(详见：#1)
+                processData: false,// 是否序列化data属性，默认true(注意：false时type必须是post，详见：#2)
+                xhr: xhrOnProgress(function (e) {// (详见：#3)
+                    var percent = e.loaded / e.total;//计算百分比
+                    $('body').append('->' + percent);
+                    //alert(percent);
+                }),
+                success: function (data) {
+                    //$('body').append('完成');
+                    if (data.Success) {
+                        alert(data.Msg);
+                        location.href = "@Url.Action("Repair")";
+                    } else {
+                        alert(data.Msg);
+                    }
+                }
+            })
+        })
+        // 监听上传进度
+        var xhrOnProgress = function (fun) {
+            xhrOnProgress.onprogress = fun; //绑定监听
+            return function () {
+                //通过$.ajaxSettings.xhr();获得XMLHttpRequest对象
+                var xhr = $.ajaxSettings.xhr();
+                //判断监听函数是否为函数
+                if (typeof xhrOnProgress.onprogress !== 'function')
+                    return xhr;
+                //如果有监听函数并且xhr对象支持绑定时就把监听函数绑定上去
+                if (xhrOnProgress.onprogress && xhr.upload) {
+                    xhr.upload.onprogress = xhrOnProgress.onprogress;
+                }
+                return xhr;
+            }
+        }
+    </script>
+}

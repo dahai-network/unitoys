@@ -5,6 +5,29 @@
     <!-- SSDL content -->
     <edmx:StorageModels>
     <Schema Namespace="UnitoysModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2008" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="UT_AfterSales">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="uniqueidentifier" Nullable="false" />
+          <Property Name="AfterSalesNum" Type="nvarchar(max)" />
+          <Property Name="MobilePhone" Type="nvarchar(max)" />
+          <Property Name="Address" Type="nvarchar(max)" />
+          <Property Name="ProblemDescr" Type="nvarchar(max)" />
+          <Property Name="Status" Type="int" Nullable="false" />
+          <Property Name="TrackingNO" Type="nvarchar(max)" />
+          <Property Name="ProductModel" Type="int" Nullable="false" />
+          <Property Name="ExpressCompany" Type="nvarchar(max)" />
+          <Property Name="CreateDate" Type="int" Nullable="false" />
+          <Property Name="Contact" Type="nvarchar(max)" />
+          <Property Name="Pic1" Type="nvarchar(max)" />
+          <Property Name="Pic2" Type="nvarchar(max)" />
+          <Property Name="Pic3" Type="nvarchar(max)" />
+          <Property Name="Pic4" Type="nvarchar(max)" />
+          <Property Name="Pic5" Type="nvarchar(max)" />
+          <Property Name="AuditRemark" Type="nvarchar(max)" />
+          <Property Name="BuyDate" Type="datetime" />
+        </EntityType>
         <EntityType Name="UT_Agent">
           <Key>
             <PropertyRef Name="ID" />
@@ -77,6 +100,7 @@
           <Property Name="IsTop" Type="bit" Nullable="false" />
         </EntityType>
         <EntityContainer Name="UnitoysModelStoreContainer">
+          <EntitySet Name="UT_AfterSales" EntityType="Self.UT_AfterSales" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="UT_Agent" EntityType="Self.UT_Agent" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="UT_ContactUS" EntityType="Self.UT_ContactUS" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="UT_GlobalContent" EntityType="Self.UT_GlobalContent" Schema="dbo" store:Type="Tables" />
@@ -115,6 +139,7 @@
           <EntitySet Name="UT_News" EntityType="Self.UT_News" />
           <EntitySet Name="UT_Agent" EntityType="UnitoysModel.UT_Agent" />
           <EntitySet Name="UT_ContactUS" EntityType="UnitoysModel.UT_ContactUS" />
+          <EntitySet Name="UT_AfterSales" EntityType="UnitoysModel.UT_AfterSales" />
         </EntityContainer>
         <EntityType Name="UT_Agent">
           <Key>
@@ -162,6 +187,29 @@
           <Property Name="CreateDate" Type="Int32" Nullable="false" />
           <Property Name="Status" Type="Int32" Nullable="false" />
           <Property Name="Remark" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="UT_AfterSales">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Guid" Nullable="false" />
+          <Property Name="AfterSalesNum" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="MobilePhone" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Address" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="ProblemDescr" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Status" Type="Int32" Nullable="false" />
+          <Property Name="TrackingNO" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="ProductModel" Type="Int32" Nullable="false" />
+          <Property Name="ExpressCompany" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="CreateDate" Type="Int32" Nullable="false" />
+          <Property Name="Contact" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Pic1" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Pic2" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Pic3" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Pic4" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Pic5" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="AuditRemark" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="BuyDate" Type="DateTime" Precision="3" />
         </EntityType>
       </Schema>
     </edmx:ConceptualModels>
@@ -240,6 +288,30 @@
                 <ScalarProperty Name="Subject" ColumnName="Subject" />
                 <ScalarProperty Name="MailAddress" ColumnName="MailAddress" />
                 <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="ID" ColumnName="ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="UT_AfterSales">
+            <EntityTypeMapping TypeName="UnitoysModel.UT_AfterSales">
+              <MappingFragment StoreEntitySet="UT_AfterSales">
+                <ScalarProperty Name="BuyDate" ColumnName="BuyDate" />
+                <ScalarProperty Name="AuditRemark" ColumnName="AuditRemark" />
+                <ScalarProperty Name="Pic5" ColumnName="Pic5" />
+                <ScalarProperty Name="Pic4" ColumnName="Pic4" />
+                <ScalarProperty Name="Pic3" ColumnName="Pic3" />
+                <ScalarProperty Name="Pic2" ColumnName="Pic2" />
+                <ScalarProperty Name="Pic1" ColumnName="Pic1" />
+                <ScalarProperty Name="Contact" ColumnName="Contact" />
+                <ScalarProperty Name="CreateDate" ColumnName="CreateDate" />
+                <ScalarProperty Name="ExpressCompany" ColumnName="ExpressCompany" />
+                <ScalarProperty Name="ProductModel" ColumnName="ProductModel" />
+                <ScalarProperty Name="TrackingNO" ColumnName="TrackingNO" />
+                <ScalarProperty Name="Status" ColumnName="Status" />
+                <ScalarProperty Name="ProblemDescr" ColumnName="ProblemDescr" />
+                <ScalarProperty Name="Address" ColumnName="Address" />
+                <ScalarProperty Name="MobilePhone" ColumnName="MobilePhone" />
+                <ScalarProperty Name="AfterSalesNum" ColumnName="AfterSalesNum" />
                 <ScalarProperty Name="ID" ColumnName="ID" />
               </MappingFragment>
             </EntityTypeMapping>

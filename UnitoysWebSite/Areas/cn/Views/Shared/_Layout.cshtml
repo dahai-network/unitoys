@@ -13,15 +13,19 @@
         .field-validation-error {
             color: #b94a48;
         }
+
         .tab-content {
             display: none;
         }
+
         .tab-content-show {
             display: block;
         }
+
         .about_main .content .p_nav li a {
             cursor: pointer;
         }
+
         .service_page .content .p_nav li a {
             cursor: pointer;
         }
@@ -36,6 +40,7 @@
                     <li class="item1"><a href="javascript:;" title="产品">产品</a></li>
                     <li class="item2"><a href="@Url.Action("Index", "Solution")" title="解决方案" @(controller == "Solution" ? "class=active" : "")>解决方案</a></li>
                     <li class="item3"><a href="@Url.Action("Index", "News")" title="新闻中心" @(controller == "News" ? "class=active" : "")>新闻中心</a></li>
+                    <li class="item4"><a href="@Url.Action("Repair", "Service")" title="服务与支持" @(controller == "Service" ? "class=active" : "")>服务与支持</a></li>
                     <li class="item4"><a href="@Url.Action("Index", "About")" title="关于我们" @(controller == "About" ? "class=active" : "")>关于我们</a></li>
                 </ul>
             </div>
@@ -53,7 +58,7 @@
     </div>
 
     @RenderBody()
-    
+
     <div class="footer">
         <div class="gnqy mbox">
             <div class="item1">

@@ -121,7 +121,6 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Areas\cn\Models\" />
     <Folder Include="Areas\en\Models\" />
     <Folder Include="Views\Down\" />
     <Folder Include="Views\Home\" />
@@ -137,6 +136,7 @@
     <Compile Include="Areas\cn\Controllers\ProductController.cs" />
     <Compile Include="Areas\cn\Controllers\ServiceController.cs" />
     <Compile Include="Areas\cn\Controllers\SolutionController.cs" />
+    <Compile Include="Areas\cn\Models\ValidateCode.cs" />
     <Compile Include="Areas\en\Controllers\HomeController.cs" />
     <Compile Include="Areas\en\enAreaRegistration.cs" />
     <Compile Include="Controllers\downController.cs" />
@@ -165,6 +165,9 @@
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>Unitoys.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="Models\UT_AfterSales.cs">
+      <DependentUpon>Unitoys.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\UT_Agent.cs">
       <DependentUpon>Unitoys.tt</DependentUpon>
@@ -284,6 +287,8 @@
     <Content Include="Content\en\js\wow.js" />
     <Content Include="Content\en\js\wow.min.js" />
     <Content Include="Content\images\about_timeline.jpg" />
+    <Content Include="Content\images\apply_repair_select.jpg" />
+    <Content Include="Content\images\apply_repair_upimg.jpg" />
     <Content Include="Content\images\banner_business.jpg" />
     <Content Include="Content\images\banner_join.jpg" />
     <Content Include="Content\images\btn_sqwx.jpg" />
@@ -292,7 +297,9 @@
     <Content Include="Content\images\company_address.jpg" />
     <Content Include="Content\images\company_address.png" />
     <Content Include="Content\images\company_banner.jpg" />
+    <Content Include="Content\images\dashed_red.png" />
     <Content Include="Content\images\home_banner_1.jpg" />
+    <Content Include="Content\images\imgcode.png" />
     <Content Include="Content\images\logo.png" />
     <Content Include="Content\images\menu_product_1.png" />
     <Content Include="Content\images\menu_product_2.png" />
@@ -474,6 +481,10 @@
     <Content Include="Areas\cn\Views\About\Index - 复制.cshtml" />
     <Content Include="Areas\cn\Views\About\ApplyAgent.cshtml" />
     <Content Include="Areas\cn\Views\Product\Unibox.cshtml" />
+    <Content Include="Areas\cn\Views\Service\Repair.cshtml" />
+    <Content Include="Areas\cn\Views\Service\ApplyRepair.cshtml" />
+    <Content Include="Areas\cn\Views\Service\SearchRepair.cshtml" />
+    <Content Include="Areas\cn\Views\Service\SearchRepairResult.cshtml" />
     <None Include="Project_Readme.html" />
     <None Include="Properties\PublishProfiles\ftp.pubxml" />
     <Content Include="Areas\en\Views\Home\Index.cshtml" />

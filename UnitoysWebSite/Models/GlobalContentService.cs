@@ -11,6 +11,7 @@ namespace UnitoysWebSite.Models
     {
         public static UT_GlobalContent GetHtmlDecodeContentFirstOrDefault(GlobalContentType globalContentType)
         {
+
             using (UnitoysEntities db = new UnitoysEntities())
             {
                 var model = db.UT_GlobalContent.FirstOrDefault(x => x.GlobalContentType == (int)globalContentType);

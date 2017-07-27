@@ -1,0 +1,54 @@
+﻿@{
+    ViewBag.Title = "SearchRepairResult";
+}
+@model List<UnitoysWebSite.Areas.cn.Controllers.ModelRepairResult>
+
+<div class="apply_repair_main">
+    <div class="mbox content">
+        <h3>申请维修</h3>
+        <div class="repair_step">
+            <p class="hx"></p>
+            <span class="cur"><b></b>提交申请</span>
+            <span class="cur"><b></b>审核</span>
+            <span><b></b>邮寄</span>
+            <span><b></b>处理</span>
+            <span><b></b>完成</span>
+        </div>
+        <div class="resultbox">
+            <table>
+                <tr><td>订单日期</td><td>产品</td><td>姓名</td><td>电话</td><td>状态</td><td>操作</td></tr>
+                @*<tr><td>2017-05-13 15:26:26</td><td>双待王</td><td>HHSHD</td><td>18850000000</td><td>提交申请</td><td><a href="javascript:;">取消</a></td></tr>*@
+                @foreach (var item in Model)
+                {
+                    <tr>
+                        <td>@item.CreateDateDesc</td>
+                        <td>@item.ProductModelDesc</td>
+                        <td>@item.Contact</td>
+                        <td>@item.MobilePhone</td>
+                        <td>@item.StatusDesc</td>
+                        <td><a href="javascript:;" onclick="cancelRepair('@item.ID')">取消</a></td>
+                    </tr>
+                }
+
+            </table>
+            <div class="tc">
+                <p class="msg">我们已经收到您的售后申请</p>
+                <p class="tips">审核周期：3个工作日（法定假日除外）</p>
+            </div>
+        </div>
+    </div>
+</div>
+@section scripts{
+    <script type="text/javascript">
+        function cancelRepair(id) {
+            $.post('@Url.Action("CancelRepair")', { ID: id }, function (data) {
+                if (data.Success) {
+                    alert(data.Msg);
+                    location.href = "@Url.Action("SearchRepairResult")";
+                } else {
+                    alert(data.Msg);
+                }
+            })
+        }
+    </script>
+}

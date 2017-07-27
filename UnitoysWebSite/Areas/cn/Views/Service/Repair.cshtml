@@ -1,0 +1,114 @@
+﻿@{
+    ViewBag.Title = "Repair";
+}
+<div class="service_repair_main">
+    <div class="mbox content">
+        <h3>售后维修</h3>
+        <div class="btnbox">
+            <a href="@Url.Action("ApplyRepair")" class="btn_sqwx"></a>
+            <a href="@Url.Action("SearchRepair")" class="btn_wxcx"></a>
+        </div>
+    </div>
+    <div class="mbox content">
+        <h3>客服渠道</h3>
+        <div class="kefu_box">
+            <p class="qrcode"><img src="/Content/images/qrcode_weixin.png" /></p>
+            <p class="address">
+                扫描下方二维码添加官方微信公众号，获取帮助信息<br />
+                公司名称：深圳大海网络科技有限公司<br />
+                经销商电话：400-880-4252，0755-29988454（周一至周五 9:30-17:30）<br />
+                地址：深圳市宝安区宝源路华源科技园B座3区615-618
+            </p>
+        </div>
+    </div>
+    <div class="mbox content">
+        <h3>售后常见问题</h3>
+        <div class="service_question">
+            <ul>
+                <li>
+                    <p class="q">Q: 绑定双待王时，搜索不到周围设备怎么？</p>
+                    <p class="a">A: 您需要保持双待王有电，并且将双待王靠近手机。如果您的设备和其他手机绑定过，请关闭其他手机的蓝牙，或者远离它。</p>
+                </li>
+                <li>
+                    <p class="q">Q: 搜索时提示“该设备已绑定”，怎么办？</p>
+                    <p class="a">A: 请先登录之前绑定该双待王的账号，在个人中心中解除绑定，然后再绑定。如果您忘记了之前绑定该设备的账号，可以拨打客服电话，向爱小器官方申请解除绑定。</p>
+                </li>
+                <li>
+                    <p class="q">Q: 解绑绑定失败是怎么回事？</p>
+                    <p class="a">A: 您的手机必须联网才能解除绑定。</p>
+                </li>
+                <li>
+                    <p class="q">Q: 电话经常漏接，怎么办？ </p>
+                    <p class="a">A: 日常使用时，请不要杀死爱小器APP。另外进入个人中心的“权限设置”页面，然后根据引导把相关权限都开启后，再重启APP</p>
+                </li>
+                <li>
+                    <p class="q">Q: 双待王里插卡电话，却显示未插卡，怎么办？ </p>
+                    <p class="a">A: 在个人中心中进入“我的设备”页面，然后点击“未插卡”右边的刷新按钮，然后选举重启设备。重启后就可检测到卡了。</p>
+                </li>
+            </ul>
+        </div>
+
+    </div>
+    <div class="mbox  content">
+        <h3>售后政策</h3>
+        <div class="zhengce">
+            <ul>
+                <li>
+                    <b></b>
+                    <p class="t">三包政策</p>
+                    <p class="c">爱小器双待王售后服务政策，严格依据《中华人民共和国消费权益法》，《中华人民共和国产品质量法》实行售后三包政策服务，服务内容如下：</p>
+                </li>
+                <li>
+                    <b></b>
+                    <p class="t">7天无理由退货</p>
+                    <p class="c">
+                        爱小器向你承诺：凡购买双待王商品，自收到商品后7天内，支持无理由退货。退货须知：<br />
+                        1、退货的商品不得影响二次销售；<br />
+                        2、退货商品请保留商品的全部配件、赠品、说明书、保修卡、外包装等；<br />
+                        3、自收到退回商品之日起七日内，爱小器将为您返还商品价款；<br />
+                        4、通过线下门店购买的商品，请直接到销售商店退货；
+                    </p>
+                </li>
+                <li>
+                    <b></b>
+                    <p class="t">15天免费换货</p>
+                    <p class="c">
+                        爱小器向你承诺：凡购买双待王商品，自收到商品后15天内，如遇商品质量问题，将会为您免费换货。换货须知：<br />
+                        1、换货商品请保留商品的全部配件、赠品、说明书、保修卡、外包装等；<br />
+                        2、未经授权的第三方维修、误用、人为碰撞、疏忽、滥用、进液（产品浸入高温高湿环境或长时间置于有害化学制剂中）、事故、改动、不正确的安装或使用所造成的硬件问题，或撕毁、涂改商标、通过其它手段篡改机器代码序号、篡改防伪标记等，不办理退货服务；<br />
+                        3、通过线下门店购买的商品，请直接到销售商店换货；
+                    </p>
+                </li>
+                <li>
+                    <b></b>
+                    <p class="t">全国联保</p>
+                    <p class="c">
+                        爱小器向您承诺：自购买之日一年内，非人为因素出现硬件故障可提供免费维修；超过1年可享受终身维修服务，需支付维修费用；不提供以旧换新；维修须知：<br />
+                        1、送修时，请提供保修凭证（含保修卡发票）及产品；无法提供保修凭证，或擅自修改保修凭证等；我司将不提供免费保修服务；<br />
+                        2、保修期内，因使用、维护、保管不当或不按照说明书操作而引起的故障，自行拆装产品或非我司维修点修理引起的故障；功能性损坏，例如产品遭外力挤压变形、高温灼烧、化学制剂腐蚀、浸水、电击等引起的故障；此类不提供免费保修服务；<br />
+                        3、维修周期7-15个工作日（不含快递运输时间）；<br />
+                        4、申请产品维修时，寄来快递一律拒收到付；用户承担往返邮费；
+                    </p>
+                </li>
+                <li>
+                    <b></b>
+                    <p class="t">关于配件</p>
+                    <p class="c">产品充电线材支持收货15天内硬件问题免费维护，请在收货当日立即联系客服更换；由于充电线材属耗材，不提供单独保修。</p>
+                </li>
+            </ul>
+        </div>
+
+    </div>
+</div>
+
+@section scripts{
+    <script type="text/javascript" src="/Content/js/classie.js"></script>
+    <script type="text/javascript" src="/Content/js/selectFx.js"></script>
+    <script>
+        (function () {
+            [].slice.call(document.querySelectorAll('select.cs-select')).forEach(function (el) {
+                new SelectFx(el);
+            });
+        })();
+    </script>
+}
