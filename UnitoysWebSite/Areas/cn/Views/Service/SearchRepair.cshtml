@@ -1,13 +1,14 @@
 ﻿@{
     ViewBag.Title = "SearchRepair";
 }
+
 <div class="apply_repair_select">
     <div class="mbox content">
         <form class="formbox">
             <h5>维修查询</h5>
             <div class="item"><input name="MobilePhone" type="text" class="ipt_col1" placeholder="请输入您登记的手机号" /></div>
-            <div class="item"><input name="Code" type="text" class="ipt_col2" placeholder="请输入右侧验证码" /><img src="@Url.Action("GetValidateCode")" /></div>
-            <div class="bottom_btn"><a href="@Url.Action("SearchRepairResult")" class="btn_submit_apply">提交</a></div>
+            <div class="item"><input name="Code" type="text" class="ipt_col2" placeholder="请输入右侧验证码" /><img id="img" src="@Url.Action("GetValidateCode", new { id = 1 })" onclick="changeCheckCode()" /></div>
+            <div class="bottom_btn"><a href="javascript:;" class="btn_submit_apply">提交</a></div>
         </form>
     </div>
 </div>
@@ -20,7 +21,12 @@
                 } else {
                     alert(data.Msg);
                 }
+                changeCheckCode();
             })
         })
+
+        function changeCheckCode() {
+            $("#img").attr("src", $("#img").attr("src") + 1);  //id=2
+        }
     </script>
 }

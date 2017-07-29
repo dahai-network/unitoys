@@ -2,17 +2,73 @@
     ViewBag.Title = "SearchRepairResult";
 }
 @model List<UnitoysWebSite.Areas.cn.Controllers.ModelRepairResult>
-
+<style>
+    .apply_repair_main .resultbox table td a.a_btn_disabled {
+        color: gray;
+        text-decoration: none;
+    }
+</style>
 <div class="apply_repair_main">
     <div class="mbox content">
         <h3>申请维修</h3>
         <div class="repair_step">
             <p class="hx"></p>
-            <span class="cur"><b></b>提交申请</span>
-            <span class="cur"><b></b>审核</span>
-            <span><b></b>邮寄</span>
-            <span><b></b>处理</span>
-            <span><b></b>完成</span>
+            @switch (Model.FirstOrDefault().StatusEnum)
+            {
+                case UnitoysWebSite.Areas.cn.Controllers.AfterSalesStatus.Pending:
+                    <span class="cur"><b></b>提交申请</span>
+                    <span><b></b>审核</span>
+                    <span><b></b>邮寄</span>
+                    <span><b></b>处理</span>
+                    <span><b></b>完成</span>
+                    break;
+                case UnitoysWebSite.Areas.cn.Controllers.AfterSalesStatus.Pass:
+                <span class="cur"><b></b>提交申请</span>
+                <span class="cur"><b></b>审核</span>
+                <span><b></b>邮寄</span>
+                <span><b></b>处理</span>
+                <span><b></b>完成</span>
+                    break;
+                case UnitoysWebSite.Areas.cn.Controllers.AfterSalesStatus.NotPass:
+                <span class="cur"><b></b>提交申请</span>
+                <span class="cur"><b></b>审核</span>
+                <span><b></b>邮寄</span>
+                <span><b></b>处理</span>
+                <span><b></b>完成</span>
+                    break;
+                case UnitoysWebSite.Areas.cn.Controllers.AfterSalesStatus.Cancel:
+                <span class="cur"><b></b>提交申请</span>
+                <span class="cur"><b></b>审核</span>
+                <span><b></b>邮寄</span>
+                <span><b></b>处理</span>
+                <span><b></b>完成</span>
+                    break;
+                case UnitoysWebSite.Areas.cn.Controllers.AfterSalesStatus.ReceivedCourier:
+                <span class="cur"><b></b>提交申请</span>
+                <span class="cur"><b></b>审核</span>
+                <span class="cur"><b></b>邮寄</span>
+                <span><b></b>处理</span>
+                <span><b></b>完成</span>
+
+                    break;
+                case UnitoysWebSite.Areas.cn.Controllers.AfterSalesStatus.ReturnTo:
+                <span class="cur"><b></b>提交申请</span>
+                <span class="cur"><b></b>审核</span>
+                <span class="cur"><b></b>邮寄</span>
+                <span class="cur"><b></b>处理</span>
+                <span><b></b>完成</span>
+                    break;
+                case UnitoysWebSite.Areas.cn.Controllers.AfterSalesStatus.Done:
+                <span class="cur"><b></b>提交申请</span>
+                <span class="cur"><b></b>审核</span>
+                <span class="cur"><b></b>邮寄</span>
+                <span class="cur"><b></b>处理</span>
+                <span class="cur"><b></b>完成</span>
+                    break;
+                default:
+                    break;
+            }
+
         </div>
         <div class="resultbox">
             <table>
@@ -26,7 +82,14 @@
                         <td>@item.Contact</td>
                         <td>@item.MobilePhone</td>
                         <td>@item.StatusDesc</td>
-                        <td><a href="javascript:;" onclick="cancelRepair('@item.ID')">取消</a></td>
+                        @if (item.StatusEnum == 0 || item.StatusEnum == UnitoysWebSite.Areas.cn.Controllers.AfterSalesStatus.Pass)
+                        {
+                            <td><a href="javascript:;" onclick="cancelRepair('@item.ID','@item.StatusDesc')">取消</a></td>
+                        }
+                        else
+                        {
+                            <td><a href="javascript:;" onclick="cancelRepair('@item.ID','@item.StatusDesc')" class="a_btn_disabled">取消</a></td>
+                        }
                     </tr>
                 }
 
@@ -40,7 +103,10 @@
 </div>
 @section scripts{
     <script type="text/javascript">
-        function cancelRepair(id) {
+        function cancelRepair(id, statusDesc) {
+            if (statusDesc != '提交申请' && statusDesc != '审核通过') {
+                return;
+            }
             $.post('@Url.Action("CancelRepair")', { ID: id }, function (data) {
                 if (data.Success) {
                     alert(data.Msg);

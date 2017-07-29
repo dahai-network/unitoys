@@ -126,7 +126,7 @@ namespace UnitoysWebSite.Areas.cn.Controllers
 
                     UT_AfterSales entity = new UT_AfterSales();
                     entity.ID = Guid.NewGuid();
-                    entity.AfterSalesNum = String.Format("8022{0}", DateTime.Now.ToString("yyMMddHHmmssffff"));
+                    entity.AfterSalesNum = String.Format("0022{0}", DateTime.Now.ToString("yyMMddHHmmssffff"));
                     entity.Contact = model.Contact;
                     entity.MobilePhone = model.MobilePhone;
                     entity.Address = model.Address;
@@ -144,7 +144,12 @@ namespace UnitoysWebSite.Areas.cn.Controllers
 
                     db.UT_AfterSales.Add(entity);
 
-                    if (await db.SaveChangesAsync() > 0)
+                    if (db.UT_AfterSales.Any(x => x.MobilePhone == entity.MobilePhone && x.Status != 0 && x.Status != 3))
+                    {
+                        result.Success = true;
+                        result.Msg = "已申请，不允许重复申请！";
+                    }
+                    else if (await db.SaveChangesAsync() > 0)
                     {
                         result.Success = true;
                         result.Msg = "提交成功！";
@@ -176,20 +181,29 @@ namespace UnitoysWebSite.Areas.cn.Controllers
         {
             JsonAjaxResult result = new JsonAjaxResult();
 
-            if (Session["ValidateCode"].ToString() != Code)
+            using (UnitoysEntities db = new UnitoysEntities())
             {
-                result.Success = false;
-                result.Msg = "验证码错误！";
-            }
-            else
-            {
-                result.Success = true;
-                result.Msg = "验证成功！";
+                if (Session["ValidateCode"] == null || Session["ValidateCode"].ToString() != Code)
+                {
+                    result.Success = false;
+                    result.Msg = "验证码错误！";
+                }
+                else if (!db.UT_AfterSales.Any(x => x.MobilePhone == MobilePhone))
+                {
+                    result.Success = false;
+                    result.Msg = "此号码未登记维修！";
+                }
+                else
+                {
+                    result.Success = true;
+                    result.Msg = "验证成功！";
 
-                Session["RepairTel"] = MobilePhone;
-            }
+                    Session["RepairTel"] = MobilePhone;
+                }
+                Session["ValidateCode"] = null;
 
-            return Json(result);
+                return Json(result);
+            }
         }
         public ActionResult SearchRepairResult()
         {
@@ -203,7 +217,7 @@ namespace UnitoysWebSite.Areas.cn.Controllers
                 string mobilePhone = Session["RepairTel"].ToString();
                 var list = db.UT_AfterSales
                     .OrderByDescending(x => x.CreateDate)
-                    .Where(x => x.MobilePhone == mobilePhone)
+                    .Where(x => x.MobilePhone == mobilePhone).Take(1)
                     .ToList()
                     .Select(x => new ModelRepairResult()
                 {
@@ -212,6 +226,7 @@ namespace UnitoysWebSite.Areas.cn.Controllers
                     ProductModelDesc = x.ProductModel == 0 ? "手环" : "双待王",
                     Contact = x.Contact,
                     MobilePhone = x.MobilePhone,
+                    StatusEnum = (AfterSalesStatus)(x.Status),
                     StatusDesc = GetStatusForDesc(x.Status),
                 }).ToList();
 
@@ -244,7 +259,7 @@ namespace UnitoysWebSite.Areas.cn.Controllers
                         result.Success = false;
                         result.Msg = "无取消权限！";
                     }
-                    else if (entity.Status != (int)AfterSalesStatus.Pending)
+                    else if (entity.Status != (int)AfterSalesStatus.Pending && entity.Status != (int)AfterSalesStatus.Pass)
                     {
                         result.Success = false;
                         result.Msg = "当前状态不允许取消！";
@@ -321,6 +336,7 @@ namespace UnitoysWebSite.Areas.cn.Controllers
         public string ProductModelDesc { get; set; }
         public string Contact { get; set; }
         public string MobilePhone { get; set; }
+        public AfterSalesStatus StatusEnum { get; set; }
         public string StatusDesc { get; set; }
     }
 
