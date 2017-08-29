@@ -1,0 +1,122 @@
+﻿@{
+    ViewBag.Title = "ApplyAnget";
+}
+@model UnitoysWebSite.Areas.cn.Controllers.ModelAgent
+
+<div class="apply_anget_main">
+    <div class="mbox content">
+        <h3>代理商申请</h3>
+        <form class="formbox">
+            <div class="item">
+                <p class="col_2"><span class="sp1">公司名字*</span>@Html.TextBoxFor(m => m.CompanyName, new { @class = "ipt_col2" })  @Html.ValidationMessageFor(m => m.CompanyName)  @*<input type="text" class="ipt_col2" name="CompanyName" />*@</p><p class="col_2">
+                    <span class="sp2">申请代理区域*</span>
+                    <select class="slt_address" name="Area">
+                        <option value="">请选择</option>
+                        <option>北京市</option>
+                        <option>天津市</option>
+                        <option>上海市</option>
+                        <option>重庆市</option>
+                        <option>广东省</option>
+                        <option>福建省</option>
+                        <option>河北省</option>
+                        <option>河南省</option>
+                        <option>云南省</option>
+                        <option>辽宁省</option>
+                        <option>黑龙江省</option>
+                        <option>湖南省</option>
+                        <option>安徽省</option>
+                        <option>山东省</option>
+                        <option>新疆维吾尔</option>
+                        <option>江苏省</option>
+                        <option>浙江省</option>
+                        <option>江西省</option>
+                        <option>湖北省</option>
+                        <option>广西壮族</option>
+                        <option>甘肃省</option>
+                        <option>山西省</option>
+                        <option>内蒙古</option>
+                        <option>陕西省</option>
+                        <option>吉林省</option>
+                        <option>贵州省</option>
+                        <option>青海省</option>
+                        <option>西藏</option>
+                        <option>四川省</option>
+                        <option>宁夏回族</option>
+                        <option>海南省</option>
+                        @*<option>台湾省</option>*@
+                    </select>
+                </p>
+            </div>
+
+            <div class="item"><p class="col_1"><span class="sp1">注册地址*</span><input type="text" class="ipt_col1" name="RegisteredAddress" /></p></div>
+
+            <div class="item"><p class="col_2"><span class="sp1">法人代表*</span><input type="text" class="ipt_col2" name="CorporateRepresentative" /></p><p class="col_2"><span class="sp2">公司注册时间*</span><input type="date" class="ipt_col2" name="CompanyRegistrationTime" /></p></div>
+
+            <div class="item"><p class="col_1"><span class="sp1">公司性质*</span><label><input type="checkbox" name="CorporationNature" value="1" />国有</label><label><input type="checkbox" name="CorporationNature" value="2" />三资</label><label><input type="checkbox" name="CorporationNature" value="3" />私营</label><label><input type="checkbox" name="CorporationNature" value="4" />联营</label><label><input type="checkbox" name="CorporationNature" value="5" />个体</label></div>
+
+            <div class="item"><p class="col_1"><span class="sp1">团队规模*</span><label>市场人员<input type="text" class="ipt_xhx" maxlength="7" name="MarketPersonnelNum" />名</label> <label>销售人员<input type="text" class="ipt_xhx" maxlength="7" name="SalerPersonnelNum" />名</label> <label>售后服务<input type="text" class="ipt_xhx" maxlength="7" name="AfterSalesPersonalNum" />名</label></p></div>
+
+            <div class="item"><p class="col_2"><span class="sp1">经营范围*</span><input type="text" class="ipt_col2" name="ScopeBusiness" /></p><p class="col_2"><span class="sp2">目前销售区域*</span><input type="text" class="ipt_col2" name="SalesArea" /></p></div>
+
+            <div class="item"><p class="col_1"><span class="sp1">年销售额*</span><label><input type="checkbox" name="AnnualSales" value="100万以下" />100万以下</label><label><input type="checkbox" name="AnnualSales" value="100-300万" />100-300万</label><label><input type="checkbox" name="AnnualSales" value="300-500万" />300-500万</label><label><input type="checkbox" name="AnnualSales" value="500万以上" />500万以上</label></div>
+
+            <div class="item"><p class="col_1"><span class="sp3">主营业务(多选) *</span><label><input type="checkbox" name="MainBusiness" value="计算机及周边" />计算机及周边</label><label><input type="checkbox" name="MainBusiness" value="通信及周边" />通信及周边</label><label><input type="checkbox" name="MainBusiness" value="相机数码及周边" />相机数码及周边</label><label><input type="checkbox" name="MainBusiness" value="消费类电子" />消费类电子</label><label><input type="checkbox" name="MainBusiness" value="家电" />家电</label><label><input type="checkbox" name="MainBusiness" value="其他" />其他</label></div>
+
+            <div class="item"><p class="col_1"><span class="sp3">主要客户类型(多选）*</span><label><input type="checkbox" name="MainClientCategory" value="批发渠道" />批发渠道</label><label><input type="checkbox" name="MainClientCategory" value="零售" />零售</label><label><input type="checkbox" name="MainClientCategory" value="电商" />电商</label><label><input type="checkbox" name="MainClientCategory" value="定制" />定制</label><label><input type="checkbox" name="MainClientCategory" value="礼品" />礼品</label><label><input type="checkbox" name="MainClientCategory" value="商超" />商超</label><label><input type="checkbox" name="MainClientCategory" value="其他" />其他</label></div>
+
+            <div class="item"><p class="col_2"><span class="sp1">联系人*</span><input type="text" class="ipt_col2" name="Contact" /></p><p class="col_2"><span class="sp2">联系电话*</span><input type="tel" class="ipt_col2" name="ContactMobilePhone" /></p></div>
+            <div class="item"><p class="col_2"><span class="sp1">邮箱</span><input type="email" class="ipt_col2" name="EMail" /></p><p class="col_2"><span class="sp2">QQ</span><input type="text" class="ipt_col2" name="QQWeChat" /></p></div>
+            <div class="item"><p class="col_2"><span class="sp1">固话</span><input type="text" class="ipt_col2" name="Tel" /></p><p class="col_2"><span class="sp2">传真</span><input type="text" class="ipt_col2" name="FAX" /></p></div>
+            <div class="item"><p class="col_1"><span class="sp1">公司网址</span><input type="text" class="ipt_col1" name="CompanyWebSite" /></p></div>
+            <div class="item"><p class="col_1"><span class="sp3">是否代理其他产品*</span><label><input type="checkbox" name="IsAgentOtherProducts" value="true" />是</label><label><input type="checkbox" name="IsAgentOtherProducts" value="false" />否</label></div>
+            <div class="item"><p class="col_1"><span class="sp4">所代理产品<br />其他产品</span><textarea placeholder="请分别填写您所代理的其他产品的名称，年销售额，代理时长" name="OtherProducts"></textarea></p></div>
+            <div class="item"><p class="col_1"><span class="sp4">开发市场<br />设想</span><textarea name="DevelopMarketAssumptions"></textarea></p></div>
+            <div class="item"><p class="col_1"><span class="sp4">贵司渠道<br />和资源</span><textarea name="CompanyChannelsResources"></textarea></p></div>
+            <div class="item"><p class="col_1"><span class="sp4">合作建议<br />和要求</span><textarea name="CooperationSuggestion"></textarea></p></div>
+
+            <div class="tips">
+                注：我们将对您的所有资料保密，请认真详细填写，以备我公司对您的代理资格进行初步审核。经审核后，公司招商部工作人员会在两个工作日内与您联系，对此表示感谢
+            </div>
+            <div class="bottom_btn"><a href="javascript:;" class="btn_submit_apply">提交</a></div>
+        </form>
+    </div>
+</div>
+@section scripts{
+    <script type="text/javascript">
+        $(':checkbox[type="checkbox"][name="CorporationNature"]').each(function () {
+            $(this).click(function () {
+                if ($(this).is(':checked')) {
+                    $(':checkbox[type="checkbox"][name="CorporationNature"]').removeProp('checked');
+                    $(this).prop('checked', true);
+                }
+            });
+        });
+        $(':checkbox[type="checkbox"][name="AnnualSales"]').each(function () {
+            $(this).click(function () {
+                if ($(this).is(':checked')) {
+                    $(':checkbox[type="checkbox"][name="AnnualSales"]').removeProp('checked');
+                    $(this).prop('checked', true);
+                }
+            });
+        });
+        $(':checkbox[type="checkbox"][name="IsAgentOtherProducts"]').each(function () {
+            $(this).click(function () {
+                if ($(this).is(':checked')) {
+                    $(':checkbox[type="checkbox"][name="IsAgentOtherProducts"]').removeProp('checked');
+                    $(this).prop('checked', true);
+                }
+            });
+        });
+
+        $('.btn_submit_apply').click(function () {
+            $.post('@Url.Action("ApplyAgent", "About")', $('.formbox').serialize(), function (data) {
+                if (data.Success) {
+                    alert(data.Msg);
+                    location.href = "@Url.Action("Index")";
+                } else {
+                    alert(data.Msg);
+                }
+            })
+        })
+    </script>
+}
